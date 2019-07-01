@@ -1,0 +1,77 @@
+/*-------------section Reasons----------------*/
+.reasons{
+	padding-bottom: rem(187);
+	.wrapper{
+		.title-block{
+			margin-bottom: rem(40);
+		}
+		
+	}
+	.reasons-content{
+		justify-content: center;
+
+		.reasons-blocks{
+			@include col();
+			@include col-15();
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-wrap:wrap;
+			background-color: #fff;
+			border-bottom: none;
+		}
+		.reasons-block{
+			padding: 40px 24px 41px 96px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: flex-start;
+			width: 50%;
+			border-bottom: 1px dashed #E9E9E9;
+
+			&:nth-child(odd){
+				border-right: 1px dashed #E9E9E9;
+			}
+
+		}
+		.reasons-block__img{
+			position: relative;
+			width: 134px;
+			height: 149px;
+			position: relative;
+			flex-shrink: 0;
+			margin-right: rem(54);
+
+			img{
+				@include absolute-center;
+			}
+		}
+		.reasons-block__prgr{
+			margin-bottom: 0;
+			line-height: 21px;
+			color: #4F4F4F;
+		}
+		.reasons-block__title{
+			font-size: 24px;
+			line-height: 26px;
+			font-family: $mon-b;
+		}
+		.reasons-block__check{
+			width: 46px;
+			height: 46px;
+			position: absolute;
+			border-radius: 50%;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			img{
+				@include absolute-center;
+			}
+		}
+	}
+}
+/*-------------end section Reasons----------------*/

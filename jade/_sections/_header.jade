@@ -1,0 +1,62 @@
+header.header
+
+	.header-inner
+		.header-top
+			.wrapper
+				.header-top__left
+					.menu-icon
+						.dot
+						.dot
+						.dot
+						.dot
+						.dot
+						.dot
+						.dot
+						.dot
+						.dot
+					
+					.header-logo
+						a(href="#")
+							img(src="img/logo.png", alt="alt")
+						.header-logo__text
+							div «Айкэдеми»
+							div Качественное школьное дистанционное образование
+
+				.header-top__right
+					a(href="tel:+7(812)4994949").header-tel +7 (812) 499-49-49
+
+					a(href="#").button.button-empty.header-callback
+						span.icon-svg.icon-phone.dashed
+							img(src="img/icons-svg/phone.svg", alt="alt")
+						span Перезвоните мне
+
+		.header-bottom
+			.wrapper
+				img(src="img/boy.png", alt="alt").header-img
+				.header-bottom__left
+					h1 академия 
+						br
+						| дистанционного образования #[span.color-accent «Айкэдеми»]
+					
+					.sect-descr качественное школьное 
+						br
+						| образование #[span у вас дома]
+
+					.header-bottom__button
+						a(href="#").button Проверить знания
+							span.parabol.icon-svg
+
+
+					.academy-subtitle  Мы проверим знания вашего 
+						br
+						| ребенка #[span.color-accent бесплатно!]
+
+				.header-bottom__right
+					- var items = ['Вы недовольны уровнем образования, которое дает школа.', 'Ваш ребенок часто болеет, регулярно пропускает занятия.', ' Ваш ребенок учится за рубежом, но ему нужно параллельно получить российское образование.', ' Ваш ребенок профессионально занимается музыкой (спортом, балетом).'];
+
+					.header-bottom-items
+						each item, ind in items
+
+							.header-bottom-item
+								.header-bottom-item__num= (ind + 1)
+								.header-bottom-item__text= item

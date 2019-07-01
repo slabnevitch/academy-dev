@@ -1,0 +1,27 @@
+/*------section We-work---------*/
+.we-work{
+
+
+	.we-work__content{
+		justify-content: flex-end;
+		background: url(../img/bg_we-work.jpg) 0 0 no-repeat;
+
+		.we-work-informer{
+			@include col();
+			@include col-11();
+		}
+	}
+	// &__left{
+	// 	@include col();
+	// 	@include col-7();
+
+	// 	img{
+	// 		max-width: 100%;
+	// 	}
+	// }
+	// &__right{
+	// 	@include col();
+	// 	@include col-11();
+	// }
+}
+/*------end We-work---------*/

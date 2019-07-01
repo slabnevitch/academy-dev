@@ -1,0 +1,60 @@
+section.we-work.academy-sect.sect-blue
+	.wrapper
+		.title-block.text-center
+			.title-icon(style="background-image: url(img/icons-svg/checklist.svg);")
+			h2.c-blue Как мы работаем
+	
+	.wrapper.we-work__content
+		.we-work-informer
+			.we-work-informer__inner.tabs
+				.we-work-informer__counter 1
+				ul.tabs__content.we-work-informer__text
+					li#item1.tabs__item
+					- var list1 = ['• темп обучения;', '• учебный план (набор предметов, количество часов);', '• персональное расписание;', '• подбор учителей для каждого ребенка.'];
+
+						.we-work-informer__title Формируем индивидуальный образовательный маршрут:
+						
+						ul
+							each item in list1
+								li= item
+
+					li#item2.tabs__item.hidden
+						- var list2 = ['• обучение не пущено на «самотек», но и не требует высокой самоорганизации от ребенка (родителя);', '• учитель всегда работает с учеником лично «здесь и сейчас»;', ' • побуждаем успешность;формируем интерес и мотивацию.'];
+
+						.we-work-informer__title Предлагаем пошаговое сопровождение:
+
+						ul.we-work-informer__list
+							each item in list2
+								li= item
+					
+					li#item3.tabs__item.hidden
+						- var list3 = [' • полный эффект присутствия в классе;', '• личный контакт с учителем на уроке (ощущение, что ученик сидит в классе за первой партой и перед ним – учитель, которому можно задать вопрос и сразу получить ответ не только устно, но и в чате, а также на школьной доске);', ' • можно ускорять или замедлять продвижение в обучении, исходя из потребностей ученика.'];
+						
+						.we-work-informer__title Работаем в зоне развития ребенка:
+						
+						ul.we-work-informer__list
+							each item in list3
+								li= item
+					
+					li#item4.tabs__item.hidden
+						- var list4 = ['• можно в любой момент повторить пройденное столько раз и тогда, когда это потребуется;', '• родители могут контролировать обучение в записи или во время урока;', ' • код учетной записи доступен только контролирующему администратору, родителям и ученику (по решению родителей).-'];
+						.we-work-informer__title Записываем уроки ребенка, а потому
+						
+						ul.we-work-informer__list
+							each item in list4
+								li= item
+
+				.we-work-informer__handler
+					ul.tabs__list
+						li.tabs__item.tabs__item--active
+							a.tabs__link(href='#item1') 1
+						li.tabs__item
+							a.tabs__link(href='#item2') 2
+						li.tabs__item
+							a.tabs__link(href='#item3') 3
+						li.tabs__item
+							a.tabs__link(href='#item4') 4
+
+		//- .we-work__left
+		//- 	img(src="img/children.png", alt="alt")
+		//- .we-work__right

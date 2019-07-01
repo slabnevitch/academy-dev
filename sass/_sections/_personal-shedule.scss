@@ -1,0 +1,32 @@
+/*---------section Personal-shedule-------*/
+.personal-shedule{
+	padding-bottom: rem(152);
+	.wrapper{
+		justify-content: flex-end;
+
+		.personal-shedule__content{
+			@include col();
+			@include col-15();
+
+			.title-icon{
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 28px;
+			}
+			.academy-subtitle{
+				margin-bottom: 80px;
+				color: $par-gray;
+			}
+			.button{
+				.parabol{
+					bottom: 35px;
+					right: -42px;
+					top: auto;
+					background-image:  url(../img/icons-svg/parabol-invert.svg);
+				}
+			}
+		}
+
+	}
+}
+/*---------end Personal-shedule-------*/
