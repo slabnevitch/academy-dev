@@ -1,14 +1,121 @@
 /*------section We-work---------*/
 .we-work{
+	padding-bottom: rem(95);
 
+	background: url(../img/bg_we-work.jpg) 0 0 no-repeat;
+	background-size: cover;
+
+	h2{
+		margin-bottom: rem(40);
+	}
 
 	.we-work__content{
 		justify-content: flex-end;
-		background: url(../img/bg_we-work.jpg) 0 0 no-repeat;
 
 		.we-work-informer{
 			@include col();
 			@include col-11();
+			padding-left: 193px;
+			padding-right: rem(130);
+			
+			.we-work-informer__inner{
+				position: relative;
+				padding: 22px;
+				background: #FFFFFF;
+				
+				box-shadow: 0px 0px 50px rgba(160, 160, 160, 0.4);
+				border-radius: 4px;
+
+				.tabs__item{
+					list-style-type: none;
+				}
+				
+			}
+			.we-work-informer__text{
+				padding: rem(175) rem(43) rem(43) rem(106);
+				min-height: 745px;
+				border-radius: 4px;
+			}
+			.we-work-informer__counter{
+				position: absolute;
+				top: 50px;
+				right: calc(100% - 100px);
+
+				font-size: rem(700);
+				line-height: rem(700);
+				font-family: $mon-bl;
+				background: #FE9E2A;
+				background: -webkit-linear-gradient(top, #FE9E2A, #F97111);
+				background: -moz-linear-gradient(top, #FE9E2A, #F97111);
+				background: linear-gradient(to bottom, #FE9E2A, #F97111);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-shadow: 0px 0px 40px rgba(255, 170, 48, 0.6);
+			}
+			.we-work-informer__handler{
+				position: absolute;
+				padding: 5px;
+				right: -64px;
+				top: 69px;
+				background: #FFFFFF;
+				box-shadow: 0px 0px 50px rgba(160, 160, 160, 0.4);
+				border-radius: 100px;
+
+				.tabs__list{
+					border: 1px solid #E9E9E9;
+					border-radius: 100px;
+				}
+				.tabs__item{
+					&.tabs__item--active{
+						.tabs__link{
+							background: linear-gradient(180deg, #FFAA30 0%, #FF8200 100%), #F76309;
+							box-shadow: 0px 0px 20px rgba(255, 170, 48, 0.6);
+							color: #fff;
+							
+						}
+					}
+				}
+
+				.tabs__link{
+					display: block;
+					width: 106px;
+					height: 106px;
+					font-size: 48px;
+					font-family: $mon-bl;
+					border-radius: 50%;
+					color: #26A3CC;
+					line-height: 106px;
+					text-align: center;
+					text-decoration: none;
+				}
+			}
+
+			.we-work-informer__title{
+				margin-bottom: rem(44);
+				font-family: $mon-b;
+				font-size: 24px;
+				line-height: 34px;
+			}
+			.we-work-informer__list{
+				li{
+					list-style-type: none;
+					position: relative;
+					text-indent: 15px;
+					color: $par-gray;
+
+					&:before{
+						content: '';
+						position: absolute;
+						width: 6px;
+						height: 6px;
+						left: 0;
+						top: 15px;
+						background-color: $accent;
+						border-radius: 50%;
+					}
+
+				}
+			}
 		}
 	}
 	// &__left{

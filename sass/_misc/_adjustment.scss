@@ -27,15 +27,15 @@ h1, h2{
 	font-weight: normal;
 	text-align: center;
 
-	&.c-accent{
-		color: $accent;
-	}
-	&.c-green{
-		color: $green;
-	}
-	&.c-blue{
-		color: $blue;
-	}
+}
+.c-accent{
+	color: $accent;
+}
+.c-green{
+	color: $green;
+}
+.c-blue{
+	color: $blue;
 }
 h1{
 	font-size: rem(56);

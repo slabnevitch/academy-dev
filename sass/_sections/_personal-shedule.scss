@@ -1,12 +1,29 @@
 /*---------section Personal-shedule-------*/
 .personal-shedule{
 	padding-bottom: rem(152);
+	background-color: #FAFAFA;
 	.wrapper{
 		justify-content: flex-end;
+		position: relative;
+
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: -179px;
+			right: -79px;
+			width: 972px;
+			height: 718px;
+			background:  url(../img/bg_rersonal-shedule.jpg) 0 0 no-repeat;
+			background-size: 100%;
+			z-index: 0;
+		}
 
 		.personal-shedule__content{
 			@include col();
 			@include col-15();
+			position: relative;
+			z-index: 1;
 
 			.title-icon{
 				margin-left: 0;

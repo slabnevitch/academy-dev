@@ -1,0 +1,130 @@
+/*--------section Experience------*/
+.experience{
+	padding-bottom: rem(184);
+	background-color: $sect-pink;
+
+	.wrapper{
+		.title-block{
+			margin-bottom: rem(74);
+		}
+	}
+	.experience-content{
+		justify-content: center;
+	}
+	.experience-block{
+		@include col();
+		@include col-16();
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: flex-start;
+		background-color: #FEFCF8;
+		border-radius: 20px;
+
+		ul{
+			li{
+				list-style-type: none;
+			}
+		}
+
+		.experience-tabs,
+		.experience-display{
+			// width: 50%;
+		}
+		.experience-display{
+			width: 54%;
+			flex-shrink: 0;
+			padding: 99px 30px 99px 66px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+		}
+		.experience-portrait{
+			position: relative;
+			width: 187px;
+			height: 187px;
+			margin-right: 25px;
+			border: 6px solid #BFE4F0;
+			border-radius: 50%;
+			overflow: hidden;
+			flex-shrink: 0;
+		}
+		.experience-portrait__img{
+			@include absolute-center;
+		}
+		.experience-display__title{
+			padding-left: 15px;
+			margin-bottom: 15px;
+			font-family: $mon-b;
+			font-size: 24px;
+			line-height: 26px;
+		}
+		.experience-display__features{
+			font-size: 18px;
+			line-height: 32px;
+			font-family: $mon-m;
+
+			li{
+				position: relative;
+				text-indent: 13px;
+
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 18px;
+					display: block;
+					width: 6px;
+					height: 2px;
+					background-color: $accent;
+
+				}
+
+			}
+		}
+
+		.experience-tabs{
+			flex: 1 1 auto;
+			margin-top: -46px;
+			background: radial-gradient(287.50px at 50% 57.66%, rgba(255, 255, 255, 0.91) 0%, rgba(255, 255, 255, 0.7) 100%), #EBDCC5;
+			border: 1px solid #E9E9E9;
+			box-shadow: 0px 0px 50px rgba(160, 160, 160, 0.4);
+			border-radius: 20px;
+			&__list{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				flex-wrap: wrap;
+
+				li{
+					width: 50%;
+
+					a{
+						padding: 25px 10px;
+						display: block;
+						font-size: 18px;
+						font-family: $os-b;
+						text-align: center;
+						color: #000;
+
+						&:hover,{
+							background-color: #fff;
+							text-decoration: none;
+							border: 1px solid $accent;
+							border-radius: 20px;
+						}
+						
+					}
+				}
+			}
+		}
+	}
+
+}
+/*--------end section Experience------*/

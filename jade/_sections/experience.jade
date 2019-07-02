@@ -1,0 +1,29 @@
+section.experience.academy-sect
+	.wrapper
+		.title-block.text-center
+			.title-icon(style="background-image: url(img/icons-svg/portfolio.svg);")
+			h2.c-green педагогический стаж
+			.academy-subtitle каждого преподавателя более 10 лет
+
+	.wrapper.experience-content
+		.experience-block.dashed
+			.experience-display
+				.experience-portrait
+					img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
+				
+				.experience-display__text
+					.experience-display__title Иванова Анна 
+						br
+						| Станиславона
+					- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
+
+					ul.experience-display__features
+						each item in features
+							li= item
+				
+			.experience-tabs
+				- var objects = ['Русский язык и летратура', 'Математика', 'Физика', 'Химия', 'История', 'География', 'Английский язык', 'Биология', 'Информатика', 'Обществознание'];
+				ul.experience-tabs__list
+					each obj in objects
+						li
+							a(href="#")= obj
