@@ -1,0 +1,22 @@
+section.reviews.academy-sect.sect-blue
+	.wrapper
+		.title-block.text-center
+			.title-icon(style="background-image: url(img/icons-svg/heart.svg);")
+			h2.c-blue Узнайте, что говорят ученики
+			.academy-subtitle про обучении в "Айкэдеми
+
+	.wrapper.reviews-content
+		.reviews-slider-wrapper
+			.reviews-slider.dashed
+				- for (var i=0; i < 2; i++)
+					.reviews-slide
+						.reviews-slide__user
+							img(src="img/user.jpg", alt="alt").reviews-slide__user-img
+
+						.reviews-slide__text
+							p.reviews-slide__val.academy-paragraph Замечательный преподаватель! Благодаря ему я смог почти с нулевого уровня поднятся до олимпиадного. Всем советую!
+
+							.reviews-slide__name Иванов Саша , 9 класс
+
+	.wrapper.reviews-button
+		a(href="#").button Начать учиться

@@ -6,24 +6,47 @@ section.experience.academy-sect
 			.academy-subtitle каждого преподавателя более 10 лет
 
 	.wrapper.experience-content
-		.experience-block.dashed
-			.experience-display
-				.experience-portrait
-					img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
-				
-				.experience-display__text
-					.experience-display__title Иванова Анна 
-						br
-						| Станиславона
-					- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
+		.experience-block.tabs.dashed
 
-					ul.experience-display__features
-						each item in features
-							li= item
+			.experience-display
+				ul.tabs__content
+					- for (var i=1; i < 11; i++)
+						if i==1
+							li(id="item"+ i +"", class="tabs__item")
+								.experience-portrait
+									img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
+						
+								.experience-display__text
+									.experience-display__title Иванова Анна 
+										br
+										| Станиславона
+									- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
+
+									ul.experience-display__features
+										each item in features
+											li= item
+						else	
+							li(id="item"+ i +"", class="tabs__item hidden")
+								.experience-portrait
+									img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
+						
+								.experience-display__text
+									.experience-display__title Иванова Анна 
+										br
+										| Станиславона
+									- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
+
+									ul.experience-display__features
+										each item in features
+											li= item				
 				
 			.experience-tabs
 				- var objects = ['Русский язык и летратура', 'Математика', 'Физика', 'Химия', 'История', 'География', 'Английский язык', 'Биология', 'Информатика', 'Обществознание'];
-				ul.experience-tabs__list
-					each obj in objects
-						li
-							a(href="#")= obj
+				ul.experience-tabs__list.tabs__list
+					each obj, ind in objects
+						if ind==0
+							li.tabs__item.tabs__item--active
+								a(href="#item"+(ind + 1)+"", class="tabs__link")= obj
+						else
+							li.tabs__item
+								a(href="#item"+(ind + 1)+"", class="tabs__link")= obj

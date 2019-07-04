@@ -1,0 +1,75 @@
+/*-----------section Faq------------*/
+.questions{
+	padding-top: rem(132);
+	padding-bottom: rem(117);
+	background: $sect-default url(../img/bg_faq.png) center 0 no-repeat;
+
+	.wrapper{
+		h2{
+			margin-bottom: rem(58);
+		}
+	}
+	.questions-content{
+		justify-content: space-around;
+
+		.questions-left{
+			@include col();
+			@include col-9();
+
+			.acordeon-list{
+				li{
+					list-style-type: none;
+					&.active{
+						.acordeon-link{
+							&:after{
+								background-image: url(../img/icons-svg/chevron-down-active.svg);
+							}
+						}
+					}
+				}
+			}
+
+
+			.acordeon-link{
+				position: relative;
+				display: block;
+				padding: 19px 57px 19px 30px;
+				margin-bottom: 7px;
+				font-size: 18px;
+				font-family: $mon-m;
+				line-height: 32px;
+				background: #FFFFFF;
+				box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+				border-radius: 8px;
+				color: #000;
+				text-decoration: none;
+
+
+				&:after{
+					content: '';
+					position: absolute;
+					width: 26px;
+					height: 15px;
+					// @extend .icon-svg;
+					top: 31px;
+					right: 22px;
+					background-image: url(../img/icons-svg/chevron-down.svg);
+				}
+			}
+			.acordeon-subitem{
+				padding: 30px;
+				p{
+					margin: 0;
+					font-size: 18px;
+					line-height: 30px;
+				}
+			}
+		}
+
+		.questions-right{
+			@include col();
+			@include col-7();
+		}
+	}
+}
+/*-----------end section Faq------------*/

@@ -78,6 +78,78 @@ $(function() {
 		
 	// end section we-work
 
+	// section .experience
+		var $tabs = $('.tabs__link');
+
+		$tabs.on('click', function(e) {
+			e.preventDefault();
+			var $th = $(this),
+				$href = $th.attr('href'),
+				$parent = $th.parent(),
+				$parentTabs = $th.closest('.tabs');
+
+			$parent.addClass('tabs__item--active')
+					.siblings()
+					.removeClass('tabs__item--active');
+							
+			$parentTabs.find($href)
+				.removeClass('hidden')
+				.siblings()
+				.addClass('hidden');
+		});
+	// end section .experience
+
+	// section reviews
+		$('.reviews-slider').slick({
+			responsive: [
+				
+				{
+					breakpoint: 560,
+					settings: {
+						
+						slidesPerRow: 2
+
+					}	
+				},
+				{
+					breakpoint: 400,
+					settings: {
+						
+						rows: 1,
+						slidesPerRow: 1
+
+					}	
+				}
+			]
+		});
+	// end section reviews
+
+	// section faq
+		// Accordeon-----------------------------------
+			$('.acordeon-link').click(function(e) {
+				e.preventDefault();
+				var $currentItem = $(this).closest('.acordeon-item');
+				if($currentItem.hasClass('acordeon-item-with-sublist')){
+
+					$currentItem.find('.acordeon-sublist')
+					.stop(true, true)
+					.slideToggle(150);
+
+					$currentItem.toggleClass('active')
+						.siblings()
+						.removeClass('active');
+
+					$currentItem.siblings()
+					.find('.acordeon-sublist')
+					.stop(true, true)
+					.slideUp(150);
+
+				}else{
+					return;
+				}
+			});
+		// end Accordeon-----------------------------------
+	// end section faq
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail

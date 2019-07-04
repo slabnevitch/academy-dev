@@ -25,7 +25,7 @@
 	.header-top{
 		position: relative;
 		padding-top: 15px;
-		z-index: 1;
+		z-index: 2;
 		.wrapper{
 			align-items: center;
 			padding-right: rem(100);
@@ -45,61 +45,8 @@
 				display: flex;
 				align-items: center;
 
-				.header-logo{
-					margin-left: rem(28);
-					display: -webkit-flex;
-					display: -moz-flex;
-					display: -ms-flex;
-					display: -o-flex;
-					display: flex;
-					align-items: center;
-
-					a{
-						flex-shrink: 0;
-						img{
-							max-width: 178px;
-						}
-					}
-					.header-logo__text{
-						flex-shrink: 0;
-						div{
-							&:first-child{
-								font-family: $os-r;
-								font-size: 24px;
-								line-height: 24px;
-							}
-							&:last-child{
-								font-family: $os-l;
-								font-size: 14px;
-							}
-
-						}
-					}
-				}
 			}
-			.header-top__right{
-				text-align: right;
-				a{
-					display: inline-block;
-					vertical-align: middle;
-				}
-				.header-tel{
-					font-family: $mon-b;
-					font-size: 24px;
-					color: #fff;
-					text-decoration: none;
-				}
-				.header-callback{
-					margin-left: rem(26);
-					span{
-						display: inline-block;
-						vertical-align: middle;
-					}
-					.icon-svg{
-						margin-right: 5px;
-					}
-				}
-			}
+			
 		}
 	}
 

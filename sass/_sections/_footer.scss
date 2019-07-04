@@ -1,0 +1,83 @@
+/*---------footer-----------*/
+.footer{
+	padding-top: rem(63);
+	padding-bottom: rem(90);
+	background-color: #C2E5F1;
+	.wrapper{
+		justify-content: space-between;
+
+		.logo{
+			margin-left: 0;
+		}
+
+		.footer-right{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			@include col();
+			align-items: center;
+			justify-content: flex-end;
+
+			ul.footer-socials{
+				li{
+					display: inline-block;
+					margin-right: 66px;
+					vertical-align: middle;
+					list-style-type: none;
+
+					.icon-svg{
+						width: 48px;
+						height: 48px;
+						display: block;
+
+					}
+					.icon-fb{
+						background-image: url(../img/icons-svg/fb.svg);
+					}
+					.icon-vk{
+						background-image: url(../img/icons-svg/vk.svg);
+
+					}
+
+					&:last-child{
+						margin-right: 0;
+					}
+
+
+				}
+			}
+			.academy-contacts{
+				flex-shrink: 0;
+				flex-grow: 1;
+				margin-left: rem(113);
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: center;
+				a{
+					flex: 1 1 auto;
+				}
+				
+				.academy-contacts__tel{
+					color: #000;
+				}
+				.academy-contacts__callback{
+					padding-top: 7px;
+					padding-bottom: 10px;
+					background: linear-gradient(180deg, #FFAA30 0%, #FF8200 100%), #F76309;
+					border: 1px solid #FFFFFF;
+
+					.icon-phone{
+						background: linear-gradient(180deg, rgba(255, 170, 48, 0.41) 0%, rgba(255, 130, 0, 0) 100%), #F76309;
+					}
+				}
+			}
+		}
+	}
+
+}
+/*---------end footer-----------*/

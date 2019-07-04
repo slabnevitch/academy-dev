@@ -1,0 +1,19 @@
+section.reading.academy-sect
+	.wrapper
+		.title-block.text-center
+			.title-icon(style="background-image: url(img/icons-svg/reading.svg);")
+			h2.c-green Рекомендуем почитать
+	
+	.wrapper.reading-content
+		- var ttt = ['Что такое домашняя школа?', 'Как развивать уверенность в себе с детства', '10 упражнений для развития внимания'];
+		
+		each item, ind in ttt
+			.reading-item
+				.reading-item__inner.dashed
+					.reading-item__pict(style="background-image: url(img/reading/" + (ind + 1) +".jpg);")
+						//- img(src="img/reading/1.jpg", alt="ef").reading-item__img
+					
+					.reading-item__title= item
+					p.reading-item__text Что такое социализация? Это процесс усвоения норм, морали, правил, ценностей, принятых в сообществе. Соответствие им помогает общаться с коллегами, делать карьеру, налаживать личную жизнь… ...
+
+				a(href="#").reading-item__more Дочитать

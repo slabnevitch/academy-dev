@@ -1,0 +1,40 @@
+section.questions.academy-sect
+	.wrapper
+		.title-block.text-center
+			.title-icon(style="background-image: url(img/icons-svg/conversation.svg);")
+			h2.c-blue часто задаваемые вопросы
+
+	.wrapper.questions-content
+		.questions-left
+			ul.acordeon-list
+				- for (var i=0; i < 6; i++)
+					li.acordeon-item.acordeon-item-with-sublist
+						a.acordeon-link(href="#") Можно ли одновременно учиться в обычной и домашней школе? 
+						ul.acordeon-sublist
+							li.acordeon-subitem
+								p Закон допускает сочетание различных форм получения образования и обучения (статья 17 ФЗ «Об образовании»).
+
+								p Можно ходить в обычную школу и использ`овать Фоксфорд для прокачивания знаний по отдельным предметам, а можно параллельно осваивать две программы. Конечно, если у ребёнка есть для этого способности и желание. 
+
+		.questions-right
+			form.academy-form(action="#")
+				h2.h2-mini Задайте нам вопрос
+				label.academy-form-label
+					span.academy-form-label-name Ваше имя
+					input.academy-form-input(type="text", name="" placeholder="Например, Мария")
+
+				label.academy-form-label
+					span.academy-form-label-name Ваш телефон
+					input.academy-form-input(type="text", name="" placeholder="+7 (___) __-__-__")
+
+				label.academy-form-label
+					span.academy-form-label-name Вопрос
+					input.academy-form-input(type="text", name="")
+
+				button.button.button-wide(type="submit") Задать вопрос
+
+				.academy-form__custom-policy
+					label.academy-form-custom
+						input.academy-form-check(type="checkbox", name="" required)
+						span.academy-form__custom-chek
+					span.academy-form__policy Я согласен с обработкой персональных даных

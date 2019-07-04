@@ -1,0 +1,53 @@
+/*-------section Subscribe-------------*/
+.subscribe{
+	padding-bottom: rem(175);
+	.wrapper{
+		justify-content: flex-end;
+		position: relative;
+		.subscribe-visual{
+			position: absolute;
+			top: -184px;
+			right: 131px;
+			width: 798px;
+			height: 100%;
+			img{
+				position: absolute;
+				max-width: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		.subscribe-content{
+			@include col();
+			@include col-15();
+
+			.h2-mini{
+				margin-bottom: 18px;
+			}
+
+			.title-icon{
+				margin-bottom: rem(33);
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			.academy-subtitle{
+				margin-bottom: rem(41);
+				color: $par-gray;
+			}
+
+			.academy-form{
+				width: 100%;
+				max-width: 489px;
+
+				.button{
+					width: 100%;
+				}
+			}
+			
+		}
+	}
+
+}
+/*-------end section Subscribe-------------*/
