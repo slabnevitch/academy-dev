@@ -155,6 +155,12 @@ $(function() {
 		// end Accordeon-----------------------------------
 	// end section faq
 
+	// popups
+		$( ".custom-select" ).selectmenu({
+			
+		});
+	// end popups
+
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
 	$("form").submit(function() { //Change
