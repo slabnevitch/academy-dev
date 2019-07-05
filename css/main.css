@@ -643,13 +643,6 @@ h2 {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFAA30), to(rgba(255, 130, 0, 0.4))), #F76309;
   background: -webkit-linear-gradient(#FFAA30 0%, rgba(255, 130, 0, 0.4) 100%), #F76309;
   background: linear-gradient(#FFAA30 0%, rgba(255, 130, 0, 0.4) 100%), #F76309; }
-  .button-empty {
-    padding: 4px 17px 5px 7px;
-    border: 1px solid #FFFFFF;
-    font-size: 16px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: transparent; }
   .button:hover {
     border-color: #FFC700;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-4.55%, #FFC530), color-stop(59.82%, rgba(248, 133, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(#FFAA30), to(rgba(255, 130, 0, 0.4))), #F76309;
@@ -661,6 +654,19 @@ h2 {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(20.41%, #FFAA30), color-stop(153.23%, rgba(255, 130, 0, 0.4))), #F76309;
     background: -webkit-linear-gradient(bottom, #FFAA30 20.41%, rgba(255, 130, 0, 0.4) 153.23%), #F76309;
     background: linear-gradient(360deg, #FFAA30 20.41%, rgba(255, 130, 0, 0.4) 153.23%), #F76309; }
+  .button-empty {
+    padding: 4px 17px 5px 7px;
+    border: 1px solid #FFFFFF;
+    font-size: 16px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent; }
+    .button-empty:hover {
+      border-color: #fff;
+      background: transparent; }
+    .button-empty:active {
+      color: #000;
+      background-color: #fff; }
 
 .academy-form {
   max-width: 489px; }
@@ -806,13 +812,28 @@ h2 {
       vertical-align: middle; }
     .academy-contacts .academy-contacts__callback .icon-svg {
       margin-right: 5px; }
+    .academy-contacts .academy-contacts__callback:hover .icon-phone {
+      background-image: url(../img/icons-svg/phone-active.svg);
+      background-size: 70%; }
+    .academy-contacts .academy-contacts__callback:active .icon-phone {
+      border-color: #000; }
 
 .icon-svg {
   display: inline-block;
   position: relative;
-  background: 0 0 no-repeat;
-  background-size: 100%; }
+  background: center no-repeat;
+  background-size: 90%; }
   .icon-svg img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .icon-svg svg {
     display: block;
     max-width: 100%;
     max-height: 100%;
@@ -827,7 +848,9 @@ h2 {
   width: 36px;
   height: 36px;
   -webkit-border-radius: 50%;
-  border-radius: 50%; }
+  border-radius: 50%;
+  background-image: url(../img/icons-svg/phone.svg);
+  background-size: 80%; }
 
 .parabol {
   position: absolute;
@@ -2162,6 +2185,17 @@ ul, li {
             background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 170, 48, 0.41)), to(rgba(255, 130, 0, 0))), #F76309;
             background: -webkit-linear-gradient(top, rgba(255, 170, 48, 0.41) 0%, rgba(255, 130, 0, 0) 100%), #F76309;
             background: linear-gradient(180deg, rgba(255, 170, 48, 0.41) 0%, rgba(255, 130, 0, 0) 100%), #F76309; }
+            .footer .wrapper .footer-right .academy-contacts .academy-contacts__callback .icon-phone svg {
+              fill: #fff; }
+          .footer .wrapper .footer-right .academy-contacts .academy-contacts__callback:hover {
+            border-color: #fff;
+            background: transparent;
+            color: #000;
+            background-color: #fff; }
+            .footer .wrapper .footer-right .academy-contacts .academy-contacts__callback:hover .icon-phone {
+              background: transparent; }
+              .footer .wrapper .footer-right .academy-contacts .academy-contacts__callback:hover .icon-phone svg {
+                fill: #F86C0E; }
 
 /*---------end footer-----------*/
 /*==========  Desktop First Method  ==========*/

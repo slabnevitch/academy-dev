@@ -73,6 +73,24 @@
 
 					.icon-phone{
 						background: linear-gradient(180deg, rgba(255, 170, 48, 0.41) 0%, rgba(255, 130, 0, 0) 100%), #F76309;
+						svg{
+							fill: #fff;
+						}
+					}
+
+					&:hover{
+
+						border-color: #fff;
+						background: transparent;
+						.icon-phone{
+							background: transparent;
+							svg{
+								fill: $accent;
+								
+							}
+						}
+						color: #000;
+						background-color: #fff;
 					}
 				}
 			}

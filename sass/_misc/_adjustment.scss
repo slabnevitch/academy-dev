@@ -140,13 +140,7 @@ h2{
 	border: 4px solid #FFBE68;
 	background: linear-gradient(#FFAA30 0%, rgba(255, 130, 0, 0.4) 100%), #F76309;
 
-&-empty{
-	padding: 4px 17px 5px 7px;
-	border: 1px solid #FFFFFF;
-	font-size: 16px;
-	 box-shadow:none;
-	background: transparent;
-}
+
   &:hover{
     border-color: #FFC700;
      background: linear-gradient(180deg, #FFC530 -4.55%, rgba(248, 133, 0, 0) 59.82%), linear-gradient(180deg, #FFAA30 0%, rgba(255, 130, 0, 0.4) 100%), #F76309;
@@ -158,7 +152,24 @@ h2{
     border-color: #F27409;
    background: linear-gradient(360deg, #FFAA30 20.41%, rgba(255, 130, 0, 0.4) 153.23%), #F76309;
   }
-   
+
+  &-empty{
+    padding: 4px 17px 5px 7px;
+    border: 1px solid #FFFFFF;
+    font-size: 16px;
+    box-shadow:none;
+    background: transparent;
+
+    &:hover{
+      border-color: #fff;
+      background: transparent;
+    }
+    &:active{
+      color: #000;
+      background-color: #fff;
+    }
+
+  }
 }
 .academy-form{
 	max-width: 489px;
@@ -311,15 +322,31 @@ h2{
 			margin-right: 5px;
 
 		}
+
+    &:hover{
+      .icon-phone{
+        background-image: url(../img/icons-svg/phone-active.svg);
+        background-size: 70%;
+      }
+    }
+    &:active{
+      .icon-phone{
+        border-color: #000;
+      }
+    }
+    
 	}
 }
 .icon-svg{
 	display: inline-block;
 	position: relative;
-	background:  0 0 no-repeat;
-	background-size: 100%;
+	background:  center no-repeat;
+	background-size: 90%;
 	
 	img{
+    @include absolute-center;
+  }
+  svg{
 		@include absolute-center;
 	}
 	// background: center no-repeat;
@@ -330,7 +357,8 @@ h2{
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
-
+  background-image: url(../img/icons-svg/phone.svg);
+  background-size: 80%;
 	// img{
 	// 	@include absolute-center;
 	// }
