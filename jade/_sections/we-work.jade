@@ -44,6 +44,15 @@ section.we-work.academy-sect
 							each item in list4
 								li.academy-paragraph= item
 
+					li#item5.tabs__item.hidden
+						- var list5 = ['логопедов', ' психологов;', 'социальных педагогов;', 'педагогов дополнительного образования.'];
+
+						.we-work-informer__title Привлекаем узких специалистов (по согласованию с родителями):
+						
+						ul.we-work-informer__list
+							each item in list5
+								li.academy-paragraph= item
+
 				.we-work-informer__handler
 					ul.tabs__list
 						li.tabs__item.tabs__item--active
@@ -54,6 +63,8 @@ section.we-work.academy-sect
 							a.tabs__link(href='#item3') 3
 						li.tabs__item
 							a.tabs__link(href='#item4') 4
+						li.tabs__item
+							a.tabs__link(href='#item4') 5
 
 		//- .we-work__left
 		//- 	img(src="img/children.png", alt="alt")

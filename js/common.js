@@ -11,16 +11,19 @@ $(function() {
 
 		(function howWorkdHandler(index) {
 			var $counter = $('.we-work-informer__counter'),
-				$tabs = $('.tabs__link'),
+				$tabs = $('.we-work-informer__handler .tabs__link'),
 				$informerTextItems = $('.we-work-informer__text .tabs__item'),
 				$buttons = $('.we-work-informer__handler .tabs__list .tabs__item'),
 				timer,
 				index  = 0,
+				indexMax = $buttons.length,
 				_self = this;
 
 			this.init = function() {
 				this.events();
 				this.timer();
+				console.log(indexMax);
+				
 			},
 
 			this.events = function() {
@@ -33,7 +36,7 @@ $(function() {
 					thIndex = $tabs.index($th);
 
 				_self.indexProgress(thIndex);
-				console.log('index on tabs ' + thIndex);
+				console.log("thIndex " + thIndex);
 			},
 
 			this.timer = function() {
@@ -48,7 +51,7 @@ $(function() {
 				}else{
 					
 					index++;
-					if(index > 3){
+					if(index > indexMax - 1){
 						index = 0;
 					}	
 				}
@@ -67,19 +70,20 @@ $(function() {
 					.removeClass('tabs__item--active');
 			},
 			this.textContentRender = function() {
+				console.log("text render index " + index);
 				$informerTextItems.eq(index)
 					.removeClass('hidden')
 					.siblings()
 					.addClass('hidden');
 			}
 
-			// this.init();
+			this.init();
 		})();
 		
 	// end section we-work
 
 	// section .experience
-		var $tabs = $('.tabs__link');
+		var $tabs = $('.tabs-default .tabs__link');
 
 		$tabs.on('click', function(e) {
 			e.preventDefault();

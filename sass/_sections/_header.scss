@@ -68,6 +68,8 @@
 				@include col();
 				@include col-9();
 				padding-top: rem(93);
+				position: relative;
+				z-index: 2;
 
 				h1{
 					margin-bottom: rem(50);

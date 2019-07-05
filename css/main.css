@@ -650,6 +650,17 @@ h2 {
     -webkit-box-shadow: none;
     box-shadow: none;
     background: transparent; }
+  .button:hover {
+    border-color: #FFC700;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-4.55%, #FFC530), color-stop(59.82%, rgba(248, 133, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(#FFAA30), to(rgba(255, 130, 0, 0.4))), #F76309;
+    background: -webkit-linear-gradient(top, #FFC530 -4.55%, rgba(248, 133, 0, 0) 59.82%), -webkit-linear-gradient(top, #FFAA30 0%, rgba(255, 130, 0, 0.4) 100%), #F76309;
+    background: linear-gradient(180deg, #FFC530 -4.55%, rgba(248, 133, 0, 0) 59.82%), linear-gradient(180deg, #FFAA30 0%, rgba(255, 130, 0, 0.4) 100%), #F76309; }
+  .button:active {
+    color: #9D4D00;
+    border-color: #F27409;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(20.41%, #FFAA30), color-stop(153.23%, rgba(255, 130, 0, 0.4))), #F76309;
+    background: -webkit-linear-gradient(bottom, #FFAA30 20.41%, rgba(255, 130, 0, 0.4) 153.23%), #F76309;
+    background: linear-gradient(360deg, #FFAA30 20.41%, rgba(255, 130, 0, 0.4) 153.23%), #F76309; }
 
 .academy-form {
   max-width: 489px; }
@@ -1040,7 +1051,9 @@ ul, li {
       word-wrap: break-word;
       width: -webkit-calc(50% - 30px);
       width: calc(50% - 30px);
-      padding-top: 5.8125rem; }
+      padding-top: 5.8125rem;
+      position: relative;
+      z-index: 2; }
       .header .header-bottom .wrapper .header-bottom__left h1 {
         margin-bottom: 3.125rem;
         text-align: left; }
@@ -1666,6 +1679,8 @@ ul, li {
             top: auto;
             height: 1px;
             background-color: #ECDDC8; }
+          .experience .experience-block .experience-tabs__list li:nth-child(9):after, .experience .experience-block .experience-tabs__list li:nth-child(10):after {
+            display: none; }
           .experience .experience-block .experience-tabs__list li a {
             padding: 25px 10px;
             display: block;
