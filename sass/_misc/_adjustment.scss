@@ -87,6 +87,7 @@ h2{
 	}
 	.logo-text{
 		flex-shrink: 0;
+    margin-left: 15px;
 		div{
 			&:first-child{
 				font-family: $os-r;
@@ -327,8 +328,9 @@ h2{
 
     &:hover{
       .icon-phone{
-        background-image: url(../img/icons-svg/phone-active.svg);
-        background-size: 70%;
+        svg{
+          fill: $accent;
+        }
       }
     }
     &:active{
@@ -359,11 +361,14 @@ h2{
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
-  background-image: url(../img/icons-svg/phone.svg);
+  // background-image: url(../img/icons-svg/phone.svg);
   background-size: 80%;
 	// img{
 	// 	@include absolute-center;
 	// }
+  svg{
+    fill: #fff;
+  }
 }
 
 .parabol{

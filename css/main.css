@@ -2729,6 +2729,66 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
+/*----------------------------------------------------------------------------*  Headhesive Specific Styles
+/*----------------------------------------------------------------------------*/
+/**
+ * Headhesive element clone
+ * > `clone` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     clone: 'banner--clone';
+ *   }
+ * }
+ */
+.banner--clone {
+  /* Required styles */
+  position: fixed !important;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Additional styles */
+  /* Translate -100% to move off screen */
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  /* Animations */
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+
+/**
+ * Headhesive stick
+ * > `stick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     stick: 'banner--stick';
+ *   }
+ * }
+ */
+.banner--stick {
+  /* Translate back to 0%; */
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%); }
+
+/**
+ * Headhesive unstick
+ * > `unstick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     unstick: 'banner--unstick';
+ *   }
+ * }
+ */
+.banner--unstick {
+  /* Not required to use, but could be useful to have */ }
+
 /*-----------END LIBS------------*/
 /*--------main styles-----------*/
 * {
@@ -2864,7 +2924,8 @@ h2 {
   .logo .logo-text {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+    margin-left: 15px; }
     .logo .logo-text div:first-child {
       font-family: "OpenSansRegular", sans-serif;
       font-size: 24px;
@@ -3085,9 +3146,8 @@ h2 {
       vertical-align: middle; }
     .academy-contacts .academy-contacts__callback .icon-svg {
       margin-right: 5px; }
-    .academy-contacts .academy-contacts__callback:hover .icon-phone {
-      background-image: url(../img/icons-svg/phone-active.svg);
-      background-size: 70%; }
+    .academy-contacts .academy-contacts__callback:hover .icon-phone svg {
+      fill: #F86C0E; }
     .academy-contacts .academy-contacts__callback:active .icon-phone {
       border-color: #000; }
 
@@ -3122,8 +3182,9 @@ h2 {
   height: 36px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background-image: url(../img/icons-svg/phone.svg);
   background-size: 80%; }
+  .icon-phone svg {
+    fill: #fff; }
 
 .parabol {
   position: absolute;
@@ -3325,37 +3386,6 @@ ul, li {
   .header .header-inner {
     position: relative;
     z-index: 1; }
-  .header .header-top {
-    position: relative;
-    padding-top: 15px;
-    z-index: 2; }
-    .header .header-top .wrapper {
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-right: 6.25rem; }
-      .header .header-top .wrapper .header-top__left,
-      .header .header-top .wrapper .header-top__right {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        margin-left: 15px;
-        margin-right: 15px;
-        word-wrap: break-word;
-        width: -webkit-calc(50% - 30px);
-        width: calc(50% - 30px); }
-      .header .header-top .wrapper .header-top__left {
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center; }
   .header .header-bottom .wrapper {
     position: relative;
     -webkit-box-pack: end;
@@ -3454,6 +3484,72 @@ ul, li {
         font-size: 16px;
         line-height: 21px;
         color: #fff; }
+
+.header-top {
+  position: relative;
+  padding-top: 15px;
+  z-index: 2; }
+  .header-top .wrapper {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 6.25rem; }
+    .header-top .wrapper .header-top__left,
+    .header-top .wrapper .header-top__right {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-left: 15px;
+      margin-right: 15px;
+      word-wrap: break-word;
+      width: -webkit-calc(50% - 30px);
+      width: calc(50% - 30px); }
+    .header-top .wrapper .header-top__left {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .header-top--fixed {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff; }
+    .header-top--fixed .logo a img {
+      max-width: 150px; }
+    .header-top--fixed .academy-contacts .academy-contacts__tel {
+      color: #000; }
+    .header-top--fixed .academy-contacts__callback {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 9px;
+      background: -webkit-gradient(linear, left top, left bottom, from(#FFAA30), to(#FF8200)), #F76309;
+      background: -webkit-linear-gradient(top, #FFAA30 0%, #FF8200 100%), #F76309;
+      background: linear-gradient(180deg, #FFAA30 0%, #FF8200 100%), #F76309;
+      border: 1px solid #FFFFFF; }
+      .header-top--fixed .academy-contacts__callback .icon-svg {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 170, 48, 0.41)), to(rgba(255, 130, 0, 0))), #F76309;
+        background: -webkit-linear-gradient(top, rgba(255, 170, 48, 0.41) 0%, rgba(255, 130, 0, 0) 100%), #F76309;
+        background: linear-gradient(180deg, rgba(255, 170, 48, 0.41) 0%, rgba(255, 130, 0, 0) 100%), #F76309; }
+      .header-top--fixed .academy-contacts__callback:hover {
+        background: transparent;
+        border-color: #000;
+        color: #000; }
+        .header-top--fixed .academy-contacts__callback:hover .icon-phone {
+          background: transparent;
+          border-color: #000; }
+          .header-top--fixed .academy-contacts__callback:hover .icon-phone svg {
+            fill: #F86C0E; }
+      .header-top--fixed .academy-contacts__callback:active .icon-phone svg {
+        fill: #000; }
+
+.banner--clone:after {
+  display: none; }
 
 /*-----------end header-------------*/
 /*-------------section Reasons----------------*/
@@ -3863,6 +3959,7 @@ ul, li {
       margin-bottom: 95px; }
     .modes .wrapper .modes-item__link {
       display: block;
+      position: relative;
       text-align: center;
       font-size: 24px;
       font-family: "MontseratBold", sans-serif; }
@@ -4530,6 +4627,56 @@ ul, li {
     font-size: 24px;
     font-family: "MontseratBold", sans-serif;
     color: #F86C0E; }
+
+.address-content-map {
+  height: 525px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px; }
+
+.reading-popup-top {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 3.625rem; }
+
+.reading-popup-img {
+  padding-bottom: 27.39%;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background: 0 0 no-repeat;
+  background-size: cover; }
+
+.reading-popup-img,
+.reading-popup-top__text {
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px);
+  margin-left: 15px;
+  margin-right: 15px; }
+
+.reading-popup-top__text {
+  padding-top: 2.8125rem; }
+
+.reading-popup-par {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 25px; }
+
+.mfp-close {
+  right: 23px;
+  top: 26px;
+  font-size: 40px; }
+  .mfp-close:active {
+    top: 26px; }
 
 /*-----------end popups-----------------*/
 /*---------footer-----------*/

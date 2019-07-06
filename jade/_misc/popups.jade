@@ -75,7 +75,7 @@
 						span.academy-form__custom-chek
 					span.academy-form__policy Я согласен с обработкой персональных даных
 
-.academy-popup.academy-popup--address.academy-popup--wide#address-popup
+.academy-popup.academy-popup--address.academy-popup--wide#address-popup.mfp-hide
 	.academy-popup__inner.tabs.tabs-default.dashed
 		h2.h2-mini узнать адрес школы
 		.address-handler
@@ -104,3 +104,41 @@
 
 			li#item2.tabs__item.hidden
 				.address-content.address-content-map#address-map
+
+.academy-popup.academy-popup--wide#reading-popup.mfp-hide
+	.academy-popup__inner.dashed
+		.reading-popup-top
+			.reading-popup-img(style="background-image: url(img/reading/reading-popup-img.jpg)")
+			.reading-popup-top__text
+				h2.h2-mini.text-left Как развивать уверенность в себе с детства?
+				p.reading-popup-par Что такое социализация? Это процесс усвоения норм, морали, правил, ценностей, принятых в сообществе. Соответствие им помогает общаться с коллегами, делать карьеру, налаживать личную жизнь
+
+		.reading-popup-content
+			p.reading-popup-par Я считаю, что самое главное – это увлечься чем-либо. Жить среди тех, чьи увлечения в области, близкой к твоей и тем самым дают дополнительные силы и вдохновение. Ты привыкаешь и потом идёшь по соответствующему твоим интересам пути, занимаешься именно своей деятельностью и будешь к ней лучшим образом подготовлен. Очень хорошо, что есть интернет, который предоставляет возможность общаться с теми, кто заинтересован в том же, что и ты. И, по большому счету, такое общение - это и есть социализация.
+
+			p.reading-popup-par С детства вводите ребёнка в нужное для развития его талантов окружение, и это обеспечит его социализацию в соответствующем социуме. 
+
+			p.reading-popup-par Лазарев А.Р. 
+
+.academy-popup#callback-popup.mfp-hide
+	.academy-popup__inner.dashed
+		.academy-popup__title-block
+			h2.h2-mini Заполните форму
+			.academy-subtitle мы перезвоним вам в течение двух часов и ответим на любые вопросы об обучении в академии
+
+		form.academy-form(action="#")
+			label.academy-form-label
+				span.academy-form-label-name Ваше имя
+				input.academy-form-input(type="text", name="" placeholder="Например, Мария")
+
+			label.academy-form-label
+					span.academy-form-label-name Ваш телефон
+					input.academy-form-input(type="text", name="" placeholder="+7 (___) __-__-__")
+
+			button.button.button-wide(type="submit") Перезвоните мне
+
+			.academy-form__custom-policy
+					label.academy-form-custom
+						input.academy-form-check(type="checkbox", name="" required)
+						span.academy-form__custom-chek
+					span.academy-form__policy Я согласен с обработкой персональных даных
