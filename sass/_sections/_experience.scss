@@ -163,4 +163,12 @@
 	}
 
 }
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.experience .experience-block .experience-tabs{
+		flex: 1 1 0;
+
+	}
+}
 /*--------end section Experience------*/

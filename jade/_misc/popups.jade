@@ -51,10 +51,10 @@
 						span.academy-form__custom-chek
 					span.academy-form__policy Я согласен с обработкой персональных даных
 
-.academy-popup#consult-popup
+.academy-popup#consult-popup.mfp-hide
 	.academy-popup__inner.dashed
 		.academy-popup__title-block
-			h2.h2-mini Оставить заявку
+			h2.h2-mini  Получите консультацию
 			.academy-subtitle мы перезвоним вам в течение двух часов и ответим на любые вопросы об обучении в академии
 
 		form.academy-form(action="#")
@@ -67,10 +67,40 @@
 					input.academy-form-input(type="text", name="" placeholder="+7 (___) __-__-__")
 
 
-			button.button.button-wide(type="submit") Оставить заявку
+			button.button.button-wide(type="submit") Получить косультацию
 
 			.academy-form__custom-policy
 					label.academy-form-custom
 						input.academy-form-check(type="checkbox", name="" required)
 						span.academy-form__custom-chek
 					span.academy-form__policy Я согласен с обработкой персональных даных
+
+.academy-popup.academy-popup--address.academy-popup--wide#address-popup
+	.academy-popup__inner.tabs.tabs-default.dashed
+		h2.h2-mini узнать адрес школы
+		.address-handler
+			form.academy-form(action="#")
+				label.academy-form-label
+					span.academy-form-label-name Введите город или улицу ленинградской области:
+					input.academy-form-input(type="text", name="" placeholder="Например, Выборг")
+
+			ul.tabs__list.address-handler__buttons
+				li.tabs__item.tabs__item--active
+					a.tabs__link.button(href='#item1') Показать списком
+				li.tabs__item
+					a.tabs__link.button(href='#item2') Показать на карте
+
+		
+		ul.tabs__content
+			li#item1.tabs__item
+				.address-content.address-content-text
+					- for (var i=0; i < 3; i++)
+						.address-content__row
+							.address-content__name Муниципальное бюджетное образовательное учреждение "Средняя общеобразовательная школа № 10
+							.address-content__loc Ленинградская область, г. Выборг, Рубежная, 31
+
+				.address-content__more
+					a(href="#") Показать еще
+
+			li#item2.tabs__item.hidden
+				.address-content.address-content-map#address-map

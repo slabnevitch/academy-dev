@@ -131,4 +131,15 @@
 	// 	@include col-11();
 	// }
 }
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.we-work .we-work__content .we-work-informer .we-work-informer__counter{
+		background: transparent;
+		color: #FF9A1C;
+		-webkit-background-clip: border-box;
+		-webkit-text-fill-color: initial;
+	}
+
+}
 /*------end We-work---------*/

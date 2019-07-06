@@ -1,0 +1,135 @@
+/*-----------popups-----------------*/
+
+.academy-popup{
+  position: relative;
+  margin: 0 auto;
+  max-width: 719px;
+  padding: 25px 22px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 50px rgba(160, 160, 160, 0.4);
+  border-radius: 4px;
+
+  .h2-mini{
+    margin-bottom: rem(40);
+  }
+
+  &--wide{
+    max-width: 1335px;
+  }
+  &--address{
+    .tabs__content{
+      .tabs__item{
+        list-style-type: none;
+      }
+    }
+  }
+}
+.academy-popup__inner{
+  padding: rem(76) rem(93) rem(45) rem(93);
+  border-radius: 8px;
+}
+.academy-popup__title-block{
+  .h2-mini{
+    margin-bottom: 33px;
+  }
+  .academy-subtitle{
+    margin-bottom: 37px;
+    color: $par-gray;
+    font-family: $mon-m;
+    text-align: center;
+  }
+}
+.address-handler{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+  align-items: flex-end;
+  margin-bottom: rem(56);
+
+  .academy-form{
+    max-width: none;
+    width: 50%;
+
+   .academy-form-input{
+      max-width: 470px;
+    }
+    .academy-form-label{
+      margin-bottom: 0;
+    }
+  }
+}
+.address-handler__buttons{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  width: 50%;
+  background: #E9E9E9;
+  border: 1px solid #C4C4C4;
+  border-radius: 50px;
+
+  .tabs__item{
+    width: 50%;
+    list-style-type: none;
+
+    &--active{
+      .tabs__link{
+        @extend .button;
+
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 16px;
+        padding-bottom: 20px;
+        font-size: 18px;
+      }
+    }
+
+  }
+  .tabs__link{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
+    color: #000;
+  }
+  
+}
+.address-content{
+
+}
+.address-content__row{
+  padding-top: 20px;
+  margin-bottom: 34px;
+  border-top: 1px solid #E9E9E9;
+
+}
+.address-content__name{
+  font-family: $mon-b;
+  font-size: 24px;
+line-height: 35px;
+}
+.address-content__loc{
+  font-size: 18px;
+  font-family: $mon-m;
+  color: $par-gray;
+}
+.address-content__more{
+  padding-top: rem(50);
+  text-align: center;
+  a{
+    font-size: 24px;
+    font-family: $mon-b;
+    color: $accent;
+  }
+}
+/*-----------end popups-----------------*/

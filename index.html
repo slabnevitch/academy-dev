@@ -677,10 +677,10 @@
         </form>
       </div>
     </div>
-    <div id="consult-popup" class="academy-popup">
+    <div id="consult-popup" class="academy-popup mfp-hide">
       <div class="academy-popup__inner dashed">
         <div class="academy-popup__title-block">
-          <h2 class="h2-mini">Оставить заявку</h2>
+          <h2 class="h2-mini"> Получите консультацию</h2>
           <div class="academy-subtitle">мы перезвоним вам в течение двух часов и ответим на любые вопросы об обучении в академии</div>
         </div>
         <form action="#" class="academy-form">
@@ -690,13 +690,51 @@
           <label class="academy-form-label"><span class="academy-form-label-name">Ваш телефон</span>
             <input type="text" name="" placeholder="+7 (___) __-__-__" class="academy-form-input">
           </label>
-          <button type="submit" class="button button-wide">Оставить заявку</button>
+          <button type="submit" class="button button-wide">Получить косультацию</button>
           <div class="academy-form__custom-policy">
             <label class="academy-form-custom">
               <input type="checkbox" name="" required class="academy-form-check"><span class="academy-form__custom-chek"></span>
             </label><span class="academy-form__policy">Я согласен с обработкой персональных даных</span>
           </div>
         </form>
+      </div>
+    </div>
+    <div id="address-popup" class="academy-popup academy-popup--address academy-popup--wide">
+      <div class="academy-popup__inner tabs tabs-default dashed">
+        <h2 class="h2-mini">узнать адрес школы</h2>
+        <div class="address-handler">
+          <form action="#" class="academy-form">
+            <label class="academy-form-label"><span class="academy-form-label-name">Введите город или улицу ленинградской области:</span>
+              <input type="text" name="" placeholder="Например, Выборг" class="academy-form-input">
+            </label>
+          </form>
+          <ul class="tabs__list address-handler__buttons">
+            <li class="tabs__item tabs__item--active"><a href="#item1" class="tabs__link button">Показать списком</a></li>
+            <li class="tabs__item"><a href="#item2" class="tabs__link button">Показать на карте</a></li>
+          </ul>
+        </div>
+        <ul class="tabs__content">
+          <li id="item1" class="tabs__item">
+            <div class="address-content address-content-text">
+              <div class="address-content__row">
+                <div class="address-content__name">Муниципальное бюджетное образовательное учреждение "Средняя общеобразовательная школа № 10</div>
+                <div class="address-content__loc">Ленинградская область, г. Выборг, Рубежная, 31</div>
+              </div>
+              <div class="address-content__row">
+                <div class="address-content__name">Муниципальное бюджетное образовательное учреждение "Средняя общеобразовательная школа № 10</div>
+                <div class="address-content__loc">Ленинградская область, г. Выборг, Рубежная, 31</div>
+              </div>
+              <div class="address-content__row">
+                <div class="address-content__name">Муниципальное бюджетное образовательное учреждение "Средняя общеобразовательная школа № 10</div>
+                <div class="address-content__loc">Ленинградская область, г. Выборг, Рубежная, 31</div>
+              </div>
+            </div>
+            <div class="address-content__more"><a href="#">Показать еще</a></div>
+          </li>
+          <li id="item2" class="tabs__item hidden">
+            <div id="address-map" class="address-content address-content-map"></div>
+          </li>
+        </ul>
       </div>
     </div>
     <script src="js/libs/jquery/jquery-1.11.2.min.js"></script>
