@@ -22,6 +22,17 @@ header.header
 							div «Айкэдеми»
 							div Качественное школьное дистанционное образование
 
+
+					- var menus = ['6 причин', 'Как мы работаем', 'Педагогический стаж', 'Наши звездочки', 'Отзывы', 'Статьи', 'Вопросы'];
+						nav.header-menu
+							a(href="tel:+78124994949").header-menu__tel +7 (812) 499-49-49
+							ul
+								each item in menus
+									li
+										a(href="#")= item
+
+					a(href="tel:+7(812)4994949").academy-contacts__tel +7 (812) 499-49-49
+				
 				.academy-contacts
 					a(href="tel:+7(812)4994949").academy-contacts__tel +7 (812) 499-49-49
 
@@ -34,15 +45,7 @@ header.header
 					
 					a(href="#callback-popup").icon-svg.to-popup.header-callback-mob
 						img(src="img/icons-svg/phone.svg", alt="alt")
-			- var menus = ['6 причин', 'Как мы работаем', 'Педагогический стаж', 'Наши звездочки', 'Отзывы', 'Статьи', 'Вопросы'];
-			
-			nav.header-menu
-				a(href="tel:+78124994949").header-menu__tel +7 (812) 499-49-49
-				ul
-					each item in menus
-						li
-							a(href="#")= item		
-		
+				
 		.header-bottom
 			.wrapper
 				img(src="img/boy.png", alt="alt").header-img

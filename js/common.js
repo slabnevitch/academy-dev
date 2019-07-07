@@ -1,27 +1,47 @@
 jQuery(function() {
 	jQuery(document).ready(function() {
 		// section Header
-			$('.menu-icon').on('click', menuHamburgerClick);
-
-			function menuHamburgerClick() {
-				$(this).toggleClass('clicked');
-
-			}
-
 			var hHoptions = {
-				offset: 100,
+				offset: $('.header').height(),
 				offsetSide: 'top',
 				classes: {
 					clone:   'banner--clone header-top--fixed',
 					stick:   'banner--stick',
 					unstick: 'banner--unstick'
 				},
-				onInit: function () {
-					$(this.clonedElem).find('.menu-icon').on('click', menuHamburgerClick);
-				},
+				 onStick:   function () {
+
+				 }
+				// onInit: function () {
+				// 	$(this.clonedElem).find('.menu-icon').on('click', menuHamburgerClick);
+				// },
 			};
 
 			var header = new Headhesive('.header-top', hHoptions);
+
+			$('.menu-icon').on('click', menuHamburgerClick);
+
+			function menuHamburgerClick() {
+				var $th = $(this),
+					$iconParent = $th.closest('.header-top');
+
+				if(screen.width > 992){
+					$('.header-top--fixed').addClass('banner--stick');
+					$('.header-top--fixed').removeClass('banner--unstick');
+					
+
+					return false;
+				}
+					
+					$(this).toggleClass('clicked');
+				$('html').toggleClass('menu-opened');
+				$iconParent.toggleClass('menu-opened');
+				$('.header-top--fixed').removeClass('banner--unstick');
+				// $iconParent.siblings().removeClass('menu-opened');
+
+
+			}
+
 	
 		// end section Header
 
@@ -39,13 +59,10 @@ jQuery(function() {
 
 				this.init = function() {
 					this.events();
-					this.timer();
-					console.log(indexMax);
-					
+					this.timer();				
 				},
 
 				this.events = function() {
-					console.log('events!');
 					$tabs.on('click', this.tabsClick);
 				},
 				this.tabsClick = function(e) {
@@ -54,7 +71,6 @@ jQuery(function() {
 						thIndex = $tabs.index($th);
 
 					_self.indexProgress(thIndex);
-					console.log("thIndex " + thIndex);
 				},
 
 				this.timer = function() {
@@ -62,9 +78,7 @@ jQuery(function() {
 				},
 				
 				this.indexProgress = function(transitionedIndex) {
-					console.log('transitionedIndex ' + transitionedIndex);
 					if(transitionedIndex !== undefined){
-						console.log('transitionedIndex is defined!');
 						index = transitionedIndex;
 					}else{
 						
@@ -73,13 +87,12 @@ jQuery(function() {
 							index = 0;
 						}	
 					}
-					console.log('index on exit ' + index);
+;
 					this.counterRender();
 					this.buttonsRender();
 					this.textContentRender();
 				},
 				this.counterRender = function() {
-					// console.log(index);
 					$counter.text(+(index + 1));
 				},
 				this.buttonsRender = function() {
@@ -88,7 +101,6 @@ jQuery(function() {
 						.removeClass('tabs__item--active');
 				},
 				this.textContentRender = function() {
-					console.log("text render index " + index);
 					$informerTextItems.eq(index)
 						.removeClass('hidden')
 						.siblings()

@@ -4,17 +4,25 @@
 }
 html{
 	font-size: 16px;
+  &.menu-opened{
+    overflow: hidden;
+    body{
+      overflow: hidden;
+    }
+  }
 }
 body{
-	font-family: $os-r;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: rem(21);
-	min-width: 320px;
-	position: relative;
-	line-height: 1.6;
-	-webkit-font-smoothing: antialiased;
-	overflow-x: hidden;
+  // height: 2000px;
+  font-family: $os-r;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: rem(21);
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+
 }
 .wrapper{
 	@include row-flex();
@@ -45,10 +53,10 @@ h2{
 	font-size: rem(72);
 	line-height: rem(79);
 
-	&.h2-mini{
-		font-size: 36px;
-		line-height: 43px;
-	}
+}
+.h2-mini{
+	font-size: 36px;
+	line-height: 43px;
 }
 .title-block{
 	width: 100%;
@@ -176,7 +184,7 @@ h2{
 	max-width: 489px;
   .academy-form-label{
     display: block;
-    margin-bottom: rem(33);
+    margin-bottom: 33px;
   }
   .academy-form-label--file{
     position: relative;
@@ -217,10 +225,10 @@ h2{
     width: 100%;
     padding: 20px 30px;
     background: #FFFFFF;
-	border: 1px solid #C4C4C4;
-	box-sizing: border-box;
-	border-radius: 50px;
-	font-family: $os-r;
+  	border: 1px solid #C4C4C4;
+  	box-sizing: border-box;
+  	border-radius: 50px;
+  	font-family: $os-r;
     font-size: 18px;
     // font-family: $r-l;
     @include placecolor(#B0B0B0);

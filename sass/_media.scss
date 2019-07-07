@@ -13,6 +13,17 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px){
+	.address-handler{
+		display: block;
+		.academy-form{
+			margin-bottom: 15px;
+			width: 100%;
+		}
+		.address-handler__buttons{
+			width: 100%;
+		}
+	}
+
 }
 @media only screen and (max-width : 1100px){
 		html{
@@ -35,6 +46,22 @@
 				font-size: 18px;
 				line-height: 26px;
 			}
+			.reading-popup-top{
+				display: block;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.reading-popup-img, .reading-popup-top__text{
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.reading-popup-img{
+				max-width: 536px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-bottom: 47%;
+			}
 }
 	
 	
@@ -47,7 +74,21 @@
 		font-size: 32px;
 		line-height: 36px;
 	}
-	
+	.academy-popup__inner{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.academy-form .academy-form__policy{
+		font-size: 14px;
+	}
+	.address-handler .address-handler__buttons{
+		width: auto;
+		justify-content: space-between;
+	}
+	 .address-handler__buttons .tabs__item{
+	 	width: auto;
+	 }
+
 	/*Disable Animation on Mobile Devices*/
 	.animated{
 		
@@ -76,27 +117,42 @@
 	
 	
 @media only screen and (max-width : 560px){
-	// .wrapper{
-	// 	padding-left: 0;
-	// 	padding-right: 0;
-	// }
+	
+	.h2-mini{
+		font-size: 28px;
+		line-height: normal;
+	}
+	.address-content__name {
+    font-family: "MontseratBold", sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
+
 	.button:not(.button-empty){
 		padding: 10px;
 		padding-bottom: 14px;
 		width: 100%;
 	}
+	 // .address-handler__buttons .tabs__link:not(.button-empty){
+	 // 	font-size: 14px;
+	 // }
 
 }
 		
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
-
-	
+	.academy-popup{
+		padding: 10px;
+	}
+	.mfp-close {
+    right: 7px;
+    top: 7px;
+  }
 }
 
 
@@ -122,7 +178,14 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px){
-	/**/
+	html.menu-opened{
+				overflow: visible;
+			body{
+				overflow: visible;
+			}
+		}
+
+	
 }
 
 
