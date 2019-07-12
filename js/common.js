@@ -9,8 +9,8 @@ jQuery(function() {
 					stick:   'banner--stick',
 					unstick: 'banner--unstick'
 				},
-				 onStick:   function () {
-
+				 onUnstick: function () {
+				 		menuHamburgerClose();
 				 }
 				// onInit: function () {
 				// 	$(this.clonedElem).find('.menu-icon').on('click', menuHamburgerClick);
@@ -24,16 +24,17 @@ jQuery(function() {
 			function menuHamburgerClick() {
 				var $th = $(this),
 					$iconParent = $th.closest('.header-top');
+				
+				$('.menu-icon').toggleClass('clicked');
 
-				if(screen.width > 992){
-					$('.header-top--fixed').addClass('banner--stick');
+				if(screen.width >= 992){
+					$('.header-top--fixed').toggleClass('banner--stick');
 					$('.header-top--fixed').removeClass('banner--unstick');
 					
 
 					return false;
 				}
 					
-					$(this).toggleClass('clicked');
 				$('html').toggleClass('menu-opened');
 				$iconParent.toggleClass('menu-opened');
 				$('.header-top--fixed').removeClass('banner--unstick');
@@ -42,6 +43,35 @@ jQuery(function() {
 
 			}
 
+			function menuHamburgerClose() {
+				$('.menu-icon').removeClass('clicked');
+			}
+
+			$(window).scroll(function() {
+					var headerHeight = $('.header').height();
+
+					if($(this).scrollTop() > headerHeight){
+						$('.header-top--fixed .wrapper').addClass('hamburger-hidden');
+					}else{
+						
+						$('.header-top--fixed .wrapper').removeClass('hamburger-hidden');
+					}
+					console.log($(this).scrollTop());
+			});
+
+			var $menuLinks = $('.header-menu ul li a');
+			$menuLinks.click(function(e){
+				e.preventDefault();
+				var location = $(this).attr('href'), //секция с id, равным href текущей ссылки
+					headerFixedHeight = $('.banner--clone').height();
+					sectionCoord = $(location).offset().top - headerFixedHeight;
+
+				$('.header-top').removeClass('menu-opened');
+				$('html').removeClass('menu-opened');
+				$('.menu-icon').removeClass('clicked');
+
+				$('html, body').animate({scrollTop: sectionCoord}, 800);
+			});
 	
 		// end section Header
 
@@ -102,9 +132,9 @@ jQuery(function() {
 				},
 				this.textContentRender = function() {
 					$informerTextItems.eq(index)
-						.removeClass('hidden')
+						.removeClass('we-work-hidden')
 						.siblings()
-						.addClass('hidden');
+						.addClass('we-work-hidden');
 				}
 
 				this.init();
@@ -127,9 +157,21 @@ jQuery(function() {
 						.removeClass('tabs__item--active');
 								
 				$parentTabs.find($href)
-					.removeClass('hidden')
+					.addClass('active')
 					.siblings()
-					.addClass('hidden');
+					.removeClass('active');
+			});
+
+			$('.tabs-link__mob-toggle').click(function() {
+				var $th = $(this),
+					$parentItem = $th.closest('.tabs__item');
+
+				$parentItem.toggleClass('active')
+					.siblings()
+					.removeClass('active');
+
+				return false;
+
 			});
 		// end section .experience
 

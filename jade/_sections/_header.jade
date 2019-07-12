@@ -23,13 +23,13 @@ header.header
 							div Качественное школьное дистанционное образование
 
 
-					- var menus = ['6 причин', 'Как мы работаем', 'Педагогический стаж', 'Наши звездочки', 'Отзывы', 'Статьи', 'Вопросы'];
+					- var menus = [{text: '6 причин', link: 'reasons'}, {text: 'Как мы работаем', link: 'we-work'}, {text:'Педагогический стаж', link: 'experience'}, {text: 'Наши звездочки', link: 'stars'}, {text: 'Отзывы', link: 'reviews'}, {text: 'Статьи', link: 'reading'}, {text: 'Вопросы', link: 'faq'}];
 						nav.header-menu
 							a(href="tel:+78124994949").header-menu__tel +7 (812) 499-49-49
 							ul
 								each item in menus
 									li
-										a(href="#")= item
+										a(href="#"+item.link+"")= item.text
 
 					a(href="tel:+7(812)4994949").academy-contacts__tel +7 (812) 499-49-49
 				

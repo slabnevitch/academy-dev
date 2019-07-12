@@ -15,6 +15,9 @@
 		.questions-left{
 			@include col();
 			@include col-9();
+			@include col-lg_1734-9();
+			@include col-mdr-18();
+			// @include col-lg_1200-9();
 
 			.acordeon-list{
 				li{
@@ -51,7 +54,8 @@
 					width: 26px;
 					height: 15px;
 					// @extend .icon-svg;
-					top: 31px;
+					top: 50%;
+					margin-top: -8px;
 					right: 22px;
 					background-image: url(../img/icons-svg/chevron-down.svg);
 				}
@@ -69,6 +73,29 @@
 		.questions-right{
 			@include col();
 			@include col-7();
+			@include col-lg_1734-9();
+			@include col-mdr-18();
+			// @include col-lg_1200-9();
+		}
+	}
+}
+
+@media only screen and (max-width : 1764px){
+	.questions .questions-content .questions-left .acordeon-link{
+		font-size: 14px;
+		line-height: normal;
+	}
+}
+@media only screen and (max-width : 992px){
+	.questions .questions-content .questions-left{
+		margin-bottom: 30px;
+	}
+	// .questions .questions-content .questions-left .acordeon-link:after{
+	// 	top: 21px;
+	// }
+	.questions .questions-content .questions-right{
+		.academy-form{
+			max-width: none;
 		}
 	}
 }

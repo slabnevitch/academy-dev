@@ -637,7 +637,17 @@ $white: #ffffff;
 input{
 	outline: none;
 }
+.tabs-default{
+	.tabs__content{
+		.tabs__item{
+			display: none;
 
+			&.active{
+				display: block;
+			}
+		}
+	}
+}
 ul, li{
 	margin: 0;
 	padding: 0;

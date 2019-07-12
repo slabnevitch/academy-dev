@@ -13,6 +13,7 @@
 		.reasons-blocks{
 			@include col();
 			@include col-15();
+			@include col-lg_1734-18();
 			display: -webkit-flex;
 			display: -moz-flex;
 			display: -ms-flex;
@@ -72,6 +73,43 @@
 				@include absolute-center;
 			}
 		}
+	}
+}
+@media only screen and (max-width : 1734px){
+
+	.reasons .reasons-content .reasons-block{
+		padding-left: 30px;
+		padding-top: 20px;
+		padding-bottom: 15px;
+	}
+	.reasons .reasons-content .reasons-block__img {
+		width: 80px;
+    	height: 95px;
+	}
+	.reasons .reasons-content .reasons-block__title{
+		font-size: 18px;
+		line-height: 20px;	
+	}
+	.reasons .reasons-content .reasons-block__prgr{
+		font-size: 15px;
+		line-height: 18px;
+	}
+}
+@media only screen and (max-width : 1100px){
+}
+@media only screen and (max-width : 992px){
+	.reasons .reasons-content .reasons-block{
+		width: 100%;
+	}
+}
+@media only screen and (max-width : 560px){
+	.reasons .reasons-content .reasons-block{
+		display: block;
+	}
+	.reasons .reasons-content .reasons-block__img{
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
 	}
 }
 /*-------------end section Reasons----------------*/

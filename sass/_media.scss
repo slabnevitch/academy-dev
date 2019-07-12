@@ -9,10 +9,17 @@
 	.wrapper{
 		max-width: 1200px;
 	}
+	.button:not(.button-empty), .address-handler__buttons .tabs__item--active .tabs__link{
+		padding-top: 15px;
+		padding-bottom: 18px;
+	}
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px){
+	html{
+		font-size: 11px;
+	}
 	.address-handler{
 		display: block;
 		.academy-form{
@@ -61,6 +68,11 @@
 				margin-left: auto;
 				margin-right: auto;
 				padding-bottom: 47%;
+			}
+			.experience .experience-block .tabs__content .tabs__item.active{
+				.experience .experience-block{
+					display: block;
+				}
 			}
 }
 	
@@ -127,6 +139,14 @@
     font-size: 20px;
     line-height: 24px;
   }
+  .title-icon{
+  	width: 40px;
+  	height: 40px;
+  }
+  .academy-subtitle{
+  	font-size: 16px;
+  	line-height: normal;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -146,12 +166,19 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
+	.wrapper{
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.academy-popup{
 		padding: 10px;
 	}
 	.mfp-close {
     right: 7px;
     top: 7px;
+  }
+  .h2-mini{
+	font-size: 24px;
   }
 }
 

@@ -21,6 +21,7 @@
 		.subscribe-content{
 			@include col();
 			@include col-15();
+			@include col-lg_1734-18();
 
 			.h2-mini{
 				margin-bottom: 18px;
@@ -49,5 +50,29 @@
 		}
 	}
 
+}
+@media only screen and (max-width : 1764px){
+	.subscribe .wrapper .subscribe-visual{
+		right: 0;
+	}
+}
+@media only screen and (max-width : 1200px){
+	.subscribe .wrapper .subscribe-visual{
+		width: 600px;
+		top: 0;
+	}
+}
+@media only screen and (max-width : 992px){
+	.subscribe .wrapper .subscribe-visual{
+		display: none;
+	}
+	.subscribe .wrapper .subscribe-content .academy-form{
+		max-width: none;
+	}
+	.subscribe .wrapper .subscribe-content .h2-mini{
+		br{
+			display: none;
+		}
+	}
 }
 /*-------end section Subscribe-------------*/

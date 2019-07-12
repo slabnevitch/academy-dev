@@ -1,4 +1,4 @@
-section.experience.academy-sect
+section.experience.academy-sect#experience 
 	.wrapper
 		.title-block.text-center
 			.title-icon(style="background-image: url(img/icons-svg/portfolio.svg);")
@@ -9,39 +9,44 @@ section.experience.academy-sect
 		.experience-block.tabs.tabs-default.dashed
 
 			.experience-display
+				- var objects = ['Русский язык и летратура', 'Математика', 'Физика', 'Химия', 'История', 'География', 'Английский язык', 'Биология', 'Информатика', 'Обществознание'];
 				ul.tabs__content
-					- for (var i=1; i < 11; i++)
-						if i==1
-							li(id="item"+ i +"", class="tabs__item")
-								.experience-portrait
-									img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
-						
-								.experience-display__text
-									.experience-display__title Иванова Анна 
-										br
-										| Станиславона
-									- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
+					each object, ind in objects
+						if ind==0
+							li(id="item"+ (ind+1) +"", class="tabs__item active")
+								a(href="#").tabs-link__mob-toggle= object
+								.experience__person-block
+									.experience-portrait
+										img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
+							
+									.experience-display__text
+										.experience-display__title Иванова Анна 
+											br
+											| Станиславона
+										- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
 
-									ul.experience-display__features
-										each item in features
-											li= item
+										ul.experience-display__features
+											each item in features
+												li= item
 						else	
-							li(id="item"+ i +"", class="tabs__item hidden")
-								.experience-portrait
-									img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
-						
-								.experience-display__text
-									.experience-display__title Иванова Анна 
-										br
-										| Станиславона
-									- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
+							li(id="item"+ (ind+1) +"", class="tabs__item")
+								a(href="#").tabs-link__mob-toggle= object
+								.experience__person-block
+									.experience-portrait
+										img(src="img/ivanova.jpg", alt="alt").experience-portrait__img
+							
+									.experience-display__text
+										.experience-display__title Иванова Анна 
+											br
+											| Станиславона
+										- var features = ['учитель высшей категории','преподаватель русского языка и литературы', 'стаж работы с детьми 25 лет'];
 
-									ul.experience-display__features
-										each item in features
-											li= item				
+										ul.experience-display__features
+											each item in features
+												li= item				
 				
 			.experience-tabs
-				- var objects = ['Русский язык и летратура', 'Математика', 'Физика', 'Химия', 'История', 'География', 'Английский язык', 'Биология', 'Информатика', 'Обществознание'];
+				
 				ul.experience-tabs__list.tabs__list
 					each obj, ind in objects
 						if ind==0

@@ -5,6 +5,7 @@
 	.wrapper{
 		justify-content: flex-end;
 		position: relative;
+		@include lg_1200(justify-content, flex-start);
 
 		&:after{
 			content: '';
@@ -22,6 +23,9 @@
 		.personal-shedule__content{
 			@include col();
 			@include col-15();
+			@include col-lg_1734-18();
+			@include col-lg_1200-10();
+			@include col-mdr-18();
 			position: relative;
 			z-index: 1;
 
@@ -45,5 +49,29 @@
 		}
 
 	}
+}
+
+@media only screen and (max-width : 1764px){
+	.personal-shedule .wrapper:after{
+		width: 572px;
+		height: 421px;
+		right: 0;
+		top: -127px;
+	}
+}
+@media only screen and (max-width : 992px){
+	.personal-shedule .wrapper:after{
+		display: none;
+	}
+}
+@media only screen and (max-width : 768px){
+	.personal-shedule .wrapper .personal-shedule__content .title-icon{
+		margin-bottom: initial;
+	}
+}
+@media only screen and (max-width : 560px){
+ .personal-shedule .wrapper .personal-shedule__content .button .parabol{
+ 	right: 0;
+ }
 }
 /*---------end Personal-shedule-------*/
