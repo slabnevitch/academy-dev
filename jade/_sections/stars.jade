@@ -7,19 +7,21 @@ section.stars.academy-sect#stars
 	.wrapper.stars-content
 		- var stars = [{name: 'Иванов Саша', stage: '8 класс', reg: 'Побетитель всероссиской олимпиады по русскому языку'}, {name: ' Звягинценва Даша', stage: '9 класс', reg: 'Побетитель региональной олимпиады по математике'}, {name: 'Петрова Ира', stage: '4 класс', reg: 'Побетитель всероссиской олимпиады по русскому языку'}, {name: 'Воротов Олег', stage: '7 класс', reg: 'Побетитель всероссиской олимпиады по русскому языку'}];
 
-		each star, ind in stars 
-			.stars-item
-				.stars-item__inner.dashed
-					.stars-item__portrait
-						.stars-item__portrait-inner
-							img(src="img/stars/star-" + (ind + 1) + ".jpg", alt="alt").stars-item__portrait-img
+		.stars-slider
+			- for (var i=0; i < 2; i++)
+				each star, ind in stars 
+					.stars-item
+						.stars-item__inner.dashed
+							.stars-item__portrait
+								.stars-item__portrait-inner
+									img(src="img/stars/star-" + (ind + 1) + ".jpg", alt="alt").stars-item__portrait-img
 
-					.stars-item__icon.icon-svg
-						img(src="img/icons-svg/place.svg", alt="alt")
+							.stars-item__icon.icon-svg
+								img(src="img/icons-svg/place.svg", alt="alt")
 
-					.stars-item__name= star.name
-						.stars-item__stage= star.stage
-					
-					.stars-item__line
+							.stars-item__name= star.name
+								.stars-item__stage= star.stage
+							
+							.stars-item__line
 
-					.stars-item__regalia= star.reg
+							.stars-item__regalia= star.reg

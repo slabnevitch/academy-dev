@@ -175,6 +175,40 @@ jQuery(function() {
 			});
 		// end section .experience
 
+		// section stars
+		$('.stars-slider').slick({
+			slidesToScroll: 1,
+			slidesToShow: 4,
+			responsive: [
+
+			{
+				breakpoint: 1101,
+				settings: {
+
+					slidesToShow: 3,
+
+				}	
+			},
+			{
+				breakpoint: 992,
+				settings: {
+
+						slidesToShow: 2
+
+				}	
+			},
+			{
+				breakpoint: 600,
+				settings: {
+
+						slidesToShow: 1
+
+				}	
+			}
+			]
+		});
+		// end section stars
+
 		// section reviews
 			$('.reviews-slider').slick({
 				responsive: [
