@@ -60,17 +60,20 @@ jQuery(function() {
 			});
 
 			var $menuLinks = $('.header-menu ul li a');
-			$menuLinks.click(function(e){
-				e.preventDefault();
-				var location = $(this).attr('href'), //секция с id, равным href текущей ссылки
-					headerFixedHeight = $('.banner--clone').height();
-					sectionCoord = $(location).offset().top - headerFixedHeight;
+				$menuLinks.click(function(e){
+				if(screen.width > 768){
 
+					e.preventDefault();
+					var location = $(this).attr('href'), //секция с id, равным href текущей ссылки
+						headerFixedHeight = $('.banner--clone').height();
+						sectionCoord = $(location).offset().top - headerFixedHeight;
+
+
+					$('html, body').animate({scrollTop: sectionCoord}, 800);
+				}
 				$('.header-top').removeClass('menu-opened');
 				$('html').removeClass('menu-opened');
 				$('.menu-icon').removeClass('clicked');
-
-				$('html, body').animate({scrollTop: sectionCoord}, 800);
 			});
 	
 		// end section Header
@@ -117,7 +120,7 @@ jQuery(function() {
 							index = 0;
 						}	
 					}
-;
+
 					this.counterRender();
 					this.buttonsRender();
 					this.textContentRender();

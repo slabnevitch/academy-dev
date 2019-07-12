@@ -145,6 +145,43 @@
 	.modes .wrapper .modes-item{
 		max-width: 458px;
 	}
+	.modes .wrapper .modes-item__icon{
+		width: 100px;
+		height: 100px;
+	}
+	.modes .wrapper .modes-item__icon:after{
+		width: 84px;
+		height: 84px;
+	}
+	.modes .wrapper .modes-item__icon .title-icon{
+		background-size: 70%;
+	}
+	.modes .wrapper .modes-item__inner{
+		padding-top: 60px;
+	}
+	.modes .wrapper .modes-item__bottom{
+		margin-bottom: 30px;
+	}
+	.modes .wrapper .modes-item__descr{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.modes .wrapper .modes-item__bottom p{
+		margin-top: 0;
+	}
+	.modes .wrapper .modes-item:first-child .modes-item__img{
+		position: static;
+	}
+	.modes .wrapper .modes-item .modes-item__img{
+		max-width: 90%;
+	}
+	.modes .wrapper .modes-item__bottom{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.modes .wrapper .modes-item:last-child{
+		margin-top: 0;
+	}
 }
 @media only screen and (max-width : 1200px){
 	.modes .wrapper .modes-item{
@@ -162,23 +199,25 @@
 
 	}
 	.modes .wrapper .modes-item__bottom{
-		padding-left: 0;
 
 		p{
 			text-align: center;
 			font-size: 18px;
 		}
 	}
-	.modes .wrapper .modes-item:first-child .modes-item__img{
-		position: static;
-	}
-	.modes .wrapper .modes-item .modes-item__img{
-		max-width: 90%;
-	}
+	
 }
 @media only screen and (max-width : 992px){
+	
+	.modes .wrapper .modes-item .h2-mini{
+		font-size: 24px;
+		line-height: 34px;
+	}
+
+}
+@media only screen and (max-width : 768px){
 	.modes .wrapper .modes-item{
-		width: calc(100% - 30px);
+		width: calc(80% - 30px);
 		margin-bottom: 100px;
 		text-align: center;
 
@@ -189,9 +228,8 @@
 	}
 	.modes .wrapper .modes-item__inner{
 		min-height: 0;
+		padding-bottom: 15px;
 	}
-}
-@media only screen and (max-width : 768px){
 	.modes .wrapper .modes-item__bottom{
 		p{
 			text-align: center;
@@ -217,12 +255,18 @@
 			height: 70px;
 		}
 	}
-	.modes .wrapper .modes-item__descr{
-		font-size: 20px;
-		line-height: normal;
-	}
+
 	.modes .wrapper .modes-item__bottom p{
-		font-size: 20px;
+		font-size: 16px;
+	}
+	.modes .wrapper .modes-item__link{
+		font-size: 18px;
 	}
 }
+@media only screen and (max-width : 480px){
+	.modes .wrapper .modes-item{
+		width: calc(100% - 30px);
+	}
+}
+
 /*----------end section Modes------------*/
