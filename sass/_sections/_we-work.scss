@@ -129,7 +129,8 @@
 	
 	.we-work .we-work__content .we-work-informer .we-work-informer__counter{
 	    right: calc(100% - 78px);
-		font-size: 300px;
+	    top: 0;
+		font-size: 350px;
 		line-height: normal;
 	}
 	.we-work .we-work__content .we-work-informer .we-work-informer__list li{
@@ -151,13 +152,13 @@
 		min-height: 400px;
 	}
 	.we-work .we-work__content .we-work-informer .we-work-informer__handler .tabs__link{
-		width: 50px;
-    height: 50px;
-    font-size: 22px;
-    line-height: 50px;
+		width: 70px;
+    height: 70px;
+    font-size: 35px;
+    line-height: 70px;
 	}
 	.we-work .we-work__content .we-work-informer .we-work-informer__handler{
-		right: -11px;
+		right: -20px;
 		top: 30px;
 	}
 }
@@ -177,7 +178,17 @@
 		background-image: none;
 		background: radial-gradient(1055.81px at 39.37% 46.93%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #D5EDF5;
 	}
+	.we-work .we-work__content .we-work-informer .we-work-informer__handler .tabs__link{
+		width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+	}
+	.we-work .we-work__content .we-work-informer .we-work-informer__handler{
+		right: -11px;
+	}
 	.we-work .we-work__content .we-work-informer .we-work-informer__counter{
+	 top: 50px;
 	    right: calc(100% - 62px);
 		font-size: 200px;
 	}
