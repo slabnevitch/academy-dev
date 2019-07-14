@@ -3354,6 +3354,9 @@ h2 {
   font-size: 18px;
   color: #B0B0B0; }
 
+.ui-front {
+  z-index: 1500; }
+
 /*--------end selectmenu------------*/
 input {
   outline: none; }
@@ -3715,6 +3718,9 @@ ul, li {
   display: none; }
 
 @media only screen and (max-width: 1764px) {
+  .header .header-bottom .wrapper .header-bottom__left h1 {
+    font-size: 40px;
+    line-height: 53px; }
   .header-top .wrapper,
   .header-top--fixed .wrapper {
     padding-right: 15px; }
@@ -3999,8 +4005,9 @@ ul, li {
     max-height: 700px; } }
 
 @media only screen and (max-width: 320px) {
-  .header-top .logo .logo-text {
-    display: none; } }
+  .logo .logo-text div:last-child {
+    font-size: 10px;
+    line-height: 10px; } }
 
 @media only screen and (min-width: 768px) {
   .header-top .header-menu__tel {
@@ -5915,7 +5922,64 @@ ul, li {
     max-width: 1200px; }
   .button:not(.button-empty), .address-handler__buttons .tabs__item--active .tabs__link:not(.button-empty), .address-handler__buttons .tabs__item--active .tabs__link {
     padding-top: 15px;
-    padding-bottom: 18px; } }
+    padding-bottom: 18px; }
+  .academy-popup .academy-form .academy-form-input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px; }
+  .academy-popup .academy-form .academy-form__custom-policy {
+    margin-top: 20px; }
+  .academy-popup .academy-form .academy-form__policy {
+    font-size: 14px; }
+  .academy-popup .academy-form .academy-form-label-name {
+    margin-bottom: 3px;
+    font-size: 14px; }
+  .academy-popup__title-block .academy-subtitle {
+    font-size: 16px; }
+  .academy-popup__inner {
+    padding: 30px;
+    text-align: center; }
+  .academy-popup__title-block .h2-mini,
+  .academy-popup__title-block .academy-subtitle {
+    margin-bottom: 15px; }
+  .academy-popup .h2-mini {
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: normal; }
+  .academy-popup .academy-form {
+    display: inline-block; }
+  .academy-popup .academy-form .academy-form-label {
+    text-align: left;
+    margin-bottom: 15px; }
+  .academy-popup .academy-form .button, .academy-popup .academy-form .address-handler__buttons .tabs__item--active .tabs__link, .address-handler__buttons .tabs__item--active .academy-popup .academy-form .tabs__link {
+    font-size: 14px; }
+  .ui-selectmenu-button.ui-button {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .ui-selectmenu-icon.ui-icon {
+    margin-top: 5px; }
+  .ui-selectmenu-text {
+    font-size: 14px; }
+  .address-content__row {
+    margin-bottom: 15px;
+    text-align: left; }
+  .address-content__name {
+    font-size: 16px;
+    line-height: normal; }
+  .address-content__more {
+    margin-top: 15px;
+    padding-top: 0; }
+  .address-content__loc {
+    font-size: 14px; }
+  .address-handler {
+    margin-bottom: 15px; }
+  .address-handler__buttons .button:not(.button-empty), .address-handler__buttons .tabs__item--active .tabs__link:not(.button-empty),
+  .address-handler__buttons .tabs__item--active .tabs__link:not(.button-empty),
+  .address-handler__buttons .tabs__item--active .tabs__link {
+    padding-top: 10px;
+    padding-bottom: 13px; }
+  .address-content-map {
+    height: 300px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -5981,6 +6045,8 @@ ul, li {
     justify-content: space-between; }
   .address-handler__buttons .tabs__item {
     width: auto; }
+  .academy-popup .academy-form .button, .academy-popup .academy-form .address-handler__buttons .tabs__item--active .tabs__link, .address-handler__buttons .tabs__item--active .academy-popup .academy-form .tabs__link {
+    font-size: 14px; }
   /*Disable Animation on Mobile Devices*/
   .animated {
     /*CSS transitions*/
@@ -6014,7 +6080,20 @@ ul, li {
   .button:not(.button-empty), .address-handler__buttons .tabs__item--active .tabs__link:not(.button-empty) {
     padding: 10px;
     padding-bottom: 14px;
-    width: 100%; } }
+    width: 100%; }
+  .academy-popup .academy-form .academy-form__custom-policy {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left; }
+    .academy-popup .academy-form .academy-form__custom-policy .academy-form-custom {
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

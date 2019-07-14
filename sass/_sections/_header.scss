@@ -342,7 +342,10 @@
 }
 
 @media only screen and (max-width : 1764px){
-
+	.header .header-bottom .wrapper .header-bottom__left h1{
+		font-size: 40px;
+		line-height: 53px;
+	}
 	.header-top .wrapper,
 	.header-top--fixed .wrapper{
 		padding-right: 15px;
@@ -759,8 +762,10 @@
 
 }
 @media only screen and (max-width : 320px){
-	.header-top .logo .logo-text{
-		display: none;
+	
+	.logo .logo-text div:last-child{
+    font-size: 10px;
+    line-height: 10px;
 	}
 }
 

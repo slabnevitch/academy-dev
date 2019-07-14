@@ -56,7 +56,6 @@ jQuery(function() {
 						
 						$('.header-top--fixed .wrapper').removeClass('hamburger-hidden');
 					}
-					console.log($(this).scrollTop());
 			});
 
 			var $menuLinks = $('.header-menu ul li a');
