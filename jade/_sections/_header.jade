@@ -26,10 +26,28 @@ header.header
 					- var menus = [{text: '6 причин', link: 'reasons'}, {text: 'Как мы работаем', link: 'we-work'}, {text:'Педагогический стаж', link: 'experience'}, {text: 'Наши звездочки', link: 'stars'}, {text: 'Отзывы', link: 'reviews'}, {text: 'Статьи', link: 'reading'}, {text: 'Вопросы', link: 'faq'}];
 						nav.header-menu
 							a(href="tel:+78124994949").header-menu__tel +7 (812) 499-49-49
+							//- ul
+							//- 	each item in menus
+							//- 		li
+							//- 			a(href="#"+item.link+"")= item.text
 							ul
-								each item in menus
-									li
-										a(href="#"+item.link+"")= item.text
+								li
+									a(href="#reasons") 6 причин
+								li
+									a(href="#we-work") Как мы 
+										span работаем
+								li
+									a(href="#experience") Педагогический 
+										span стаж
+								li
+									a(href="#stars") Наши 
+										span звездочки
+								li
+									a(href="#reviews") Отзывы
+								li
+									a(href="#reading") Статьи
+								li
+									a(href="#faq") Вопросы
 
 					a(href="tel:+7(812)4994949").academy-contacts__tel +7 (812) 499-49-49
 				

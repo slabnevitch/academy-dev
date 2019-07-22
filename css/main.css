@@ -3558,13 +3558,17 @@ ul, li {
   .header-top .header-menu {
     display: none; }
     .header-top .header-menu li {
-      margin-right: 10px;
+      margin-right: 15px;
       list-style-type: none;
+      vertical-align: top;
       display: inline-block; }
       .header-top .header-menu li a {
+        line-height: 12px;
         font-family: "MontseratMedium", sans-serif;
         color: #000;
         text-decoration: none; }
+        .header-top .header-menu li a span {
+          display: block; }
         .header-top .header-menu li a:hover, .header-top .header-menu li a:active {
           color: #F86C0E; }
     .header-top .header-menu:last-child {
@@ -3716,8 +3720,6 @@ ul, li {
   display: none; }
 
 @media only screen and (max-width: 1764px) {
-  .header-top--fixed .header-menu li a {
-    font-size: 12px; }
   .header .header-bottom .wrapper .header-bottom__right {
     padding-right: 0; }
   .header .header-bottom .wrapper .header-bottom__left h1 {
@@ -3819,6 +3821,8 @@ ul, li {
     word-wrap: normal; } }
 
 @media only screen and (max-width: 1200px) {
+  .header-top--fixed .header-menu li a {
+    font-size: 12px; }
   .header .header-bottom .wrapper .header-bottom__right .header-bottom-item {
     max-width: 289px; }
   .header .header-bottom .wrapper .header-img {
@@ -3916,9 +3920,12 @@ ul, li {
         padding: 16px 30px 14px 30px;
         text-align: center;
         font-size: 24px;
+        line-height: normal;
         font-family: "MontseratMedium", sans-serif;
         color: #000;
-        text-decoration: none; } }
+        text-decoration: none; }
+        .header-top .header-menu li a span {
+          display: inline; } }
 
 @media only screen and (max-width: 768px) {
   .academy-contacts .academy-contacts__tel {
