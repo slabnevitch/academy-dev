@@ -103,9 +103,7 @@
 	.footer .wrapper .logo{
 		flex-basis: 0;
 	}
-	.footer .logo .logo-text{
-		flex-shrink: 1;
-	}
+	
 	.footer .wrapper .footer-right ul.footer-socials li{
 		margin-right: 15px;
 	}
@@ -115,6 +113,9 @@
 }
 
 @media only screen and (max-width : 992px){
+	.footer .logo .logo-text{
+		flex-shrink: 1;
+	}
 	.footer .wrapper .footer-right .academy-contacts{
 		flex-wrap: wrap;
 	}

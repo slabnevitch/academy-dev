@@ -165,6 +165,7 @@
 						text-align: center;
 						color: #000;
 						border: 1px solid transparent;
+						transition: all .2s linear;
 
 						&:hover,{
 							background-color: #fff;
@@ -192,6 +193,9 @@
 @media only screen and (max-width : 1764px){
 	.experience .experience-block .experience-tabs__list li a{
 		font-size: 14px;
+	}
+	.experience .experience-block .experience-display{
+		padding-bottom: 80px;
 	}
 }
 @media only screen and (max-width : 1200px){

@@ -118,6 +118,9 @@
 	.stars{
 		padding-bottom: 0;
 	}
+	.stars .stars-content .stars-item__inner{
+		min-height: 350px;
+	}
 	.stars .stars-content{
 		overflow: hidden;
 	}
@@ -156,8 +159,12 @@
 	.stars .wrapper .title-icon{
 		margin-bottom: 10px;
 	}
-
+	.stars .stars-content .stars-item__inner{
+		min-height: 0;
+		padding-bottom: 40px;
+	}
 }
+
 @media only screen and (max-width : 600px){
 	.stars .stars-content .stars-item__inner{
 		min-height: 0;

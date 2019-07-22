@@ -1,6 +1,9 @@
 /*-------section Subscribe-------------*/
 .subscribe{
 	padding-bottom: rem(175);
+	background:  url(../img/bg_subscribe.jpg) 0 0 no-repeat;
+	background-size: cover;	
+
 	.wrapper{
 		justify-content: flex-end;
 		position: relative;
@@ -54,8 +57,19 @@
 
 }
 @media only screen and (max-width : 1764px){
+	.subscribe{
+		background-position: 50% 0;
+	}
 	.subscribe .wrapper .subscribe-visual{
 		right: 0;
+	}
+	.subscribe .wrapper .subscribe-content .h2-mini{
+		span{
+			display: inline-block;
+		}
+		br{
+			display: none;
+		}
 	}
 }
 @media only screen and (max-width : 1200px){
@@ -71,6 +85,10 @@
 	}
 }
 @media only screen and (max-width : 992px){
+	.subscribe{
+		background-image: none;
+		background-color: $sect-pink;
+	}
 	.subscribe .wrapper .subscribe-content .h2-mini,
 	.subscribe .wrapper .subscribe-content .academy-subtitle{
 		max-width: none;

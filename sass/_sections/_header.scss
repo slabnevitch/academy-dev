@@ -248,7 +248,7 @@
 			.wrapper{
 				.header-top__left{
 					width: 100%;
-					justify-content: space-between;
+					// justify-content: space-between;
 
 					.academy-contacts__tel{
 						display: block;
@@ -264,7 +264,7 @@
 
 			.header-menu{
 				display: block;
-
+				margin-left: 30px;
 				li{
 					a{
 						font-size: 14px;
@@ -274,7 +274,7 @@
 
 			.logo{
 				margin-left: 0;
-				margin-right: auto;
+				// margin-right: auto;
 				// outline: 1px solid red;
 			}
 			.logo .logo-text{
@@ -286,6 +286,10 @@
 			}
 			.academy-contacts{
 				display: none;
+			}
+			.academy-contacts__tel{
+				margin-left: auto;
+				
 			}
 			.academy-contacts .academy-contacts__tel{
 				color: #000;
@@ -342,6 +346,12 @@
 }
 
 @media only screen and (max-width : 1764px){
+	.header-top--fixed .header-menu li a{
+		font-size: 12px;
+	}
+	.header .header-bottom .wrapper .header-bottom__right{
+		padding-right: 0;
+	}
 	.header .header-bottom .wrapper .header-bottom__left h1{
 		font-size: 40px;
 		line-height: 53px;
@@ -381,7 +391,7 @@
 	}
 	.header .header-bottom .wrapper .header-img{
 		max-height: 900px;
-		left: 10%;
+		left: 12%;
 	}
 	.header .header-bottom .wrapper .header-bottom__right .header-bottom-item{
 		max-width: 345px;
@@ -495,6 +505,9 @@
 		  		}
 		  	}
 		  }
+	}
+	.header .header-bottom .wrapper .header-bottom__left{
+		word-wrap: normal;
 	}
 
 }

@@ -57,8 +57,10 @@
 
 @media only screen and (max-width : 1764px){
 	.personal-shedule .wrapper:after{
-		width: 572px;
-		height: 421px;
+		// width: 572px;
+		// height: 421px;
+    width: 728px;
+    height: 551px;
 		right: 0;
 		top: -127px;
 	}
@@ -66,7 +68,19 @@
 	.personal-shedule .wrapper .personal-shedule__content .academy-subtitle{
 		max-width: none;
 	}
+	.personal-shedule .wrapper .personal-shedule__content .academy-subtitle{
+		padding-right: 100px;
+		br{
+			display: none;
+		}
+	}
 
+}
+@media only screen and (max-width : 1100px){
+	.personal-shedule .wrapper:after{
+		width: 572px;
+		height: 421px;
+	}
 }
 @media only screen and (max-width : 992px){
 	.personal-shedule .wrapper:after{

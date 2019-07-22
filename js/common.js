@@ -84,6 +84,7 @@ jQuery(function() {
 					$tabs = $('.we-work-informer__handler .tabs__link'),
 					$informerTextItems = $('.we-work-informer__text .tabs__item'),
 					$buttons = $('.we-work-informer__handler .tabs__list .tabs__item'),
+					$hoverArea = $('.we-work-informer__inner'),
 					timer,
 					index  = 0,
 					indexMax = $buttons.length,
@@ -96,6 +97,7 @@ jQuery(function() {
 
 				this.events = function() {
 					$tabs.on('click', this.tabsClick);
+					$hoverArea.hover(this.stopTimer, this.timer);
 				},
 				this.tabsClick = function(e) {
 					e.preventDefault();
@@ -108,6 +110,10 @@ jQuery(function() {
 				this.timer = function() {
 					timer = setInterval(_self.indexProgress, 5000);
 				},
+
+				this.stopTimer = function() {
+					clearInterval(timer);
+				}
 				
 				this.indexProgress = function(transitionedIndex) {
 					if(transitionedIndex !== undefined){
@@ -184,7 +190,7 @@ jQuery(function() {
 			responsive: [
 
 			{
-				breakpoint: 1101,
+				breakpoint: 1765,
 				settings: {
 
 					slidesToShow: 3,
@@ -200,7 +206,7 @@ jQuery(function() {
 				}	
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 769,
 				settings: {
 
 						slidesToShow: 1
@@ -210,6 +216,32 @@ jQuery(function() {
 			]
 		});
 		// end section stars
+
+		// sections reading
+			$('.reading-slider').slick({
+			slidesToScroll: 1,
+			slidesToShow: 3,
+			responsive: [
+
+			{
+				breakpoint: 1101,
+				settings: {
+
+					slidesToShow: 2,
+
+				}	
+			},
+			{
+				breakpoint: 900,
+				settings: {
+
+						slidesToShow: 1
+
+				}	
+			}
+			]
+		});
+		// end sections reading
 
 		// section reviews
 			$('.reviews-slider').slick({

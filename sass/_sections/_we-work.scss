@@ -126,7 +126,15 @@
 }
 
 @media only screen and (max-width : 1764px){
-	
+	.we-work{
+		padding-bottom: rem(200);
+		background-position-x: 50%;
+	}
+
+	.we-work .we-work__content .we-work-informer{
+		padding-right: 0;
+		padding-left: 300px;
+	}
 	.we-work .we-work__content .we-work-informer .we-work-informer__counter{
 	    right: calc(100% - 78px);
 	    top: 0;
@@ -149,7 +157,7 @@
 	.we-work .we-work__content .we-work-informer .we-work-informer__text {
 		padding-top: 50px;
 		padding-right: 60px;
-		min-height: 400px;
+		min-height: 500px;
 	}
 	.we-work .we-work__content .we-work-informer .we-work-informer__handler .tabs__link{
 		width: 70px;
@@ -164,9 +172,9 @@
 }
 
 @media only screen and (max-width : 1200px){
-	.we-work .we-work__content .we-work-informer{
-		padding-left: 100px;
-	}
+	// .we-work .we-work__content .we-work-informer{
+	// 	padding-left: 100px;
+	// }
 	
 
 }
@@ -174,6 +182,9 @@
 
 }
 @media only screen and (max-width : 992px){
+	.we-work .we-work__content .we-work-informer{
+		padding-left: 100px;
+	}
 	.we-work{
 		background-image: none;
 		background: radial-gradient(1055.81px at 39.37% 46.93%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #D5EDF5;

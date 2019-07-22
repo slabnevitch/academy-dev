@@ -130,6 +130,17 @@
 			text-align: center;
 			font-size: 24px;
 			font-family: $mon-b;
+
+			.parabol{
+				top: auto;
+				bottom: 10%;
+				background-image: url(../img/icons-svg/parabol-invert.svg);
+			}
+
+			&:hover, &:active{
+				color: $blue;
+			}
+			
 		}
 
 	}
@@ -145,6 +156,7 @@
 	.modes .wrapper .modes-item{
 		max-width: 458px;
 	}
+
 	.modes .wrapper .modes-item__icon{
 		width: 100px;
 		height: 100px;
@@ -161,6 +173,7 @@
 	}
 	.modes .wrapper .modes-item__bottom{
 		margin-bottom: 30px;
+		padding-left: 201px;
 	}
 	.modes .wrapper .modes-item__descr{
 		font-size: 16px;
@@ -221,7 +234,7 @@
 		}
 	}
 	.modes .wrapper .modes-item__bottom{
-		padding-left: 160px;
+		padding-left: 164px;
 	}
 	.modes .wrapper .modes-item:first-child .modes-item__img{
 		left: -100px;
